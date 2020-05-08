@@ -1,0 +1,552 @@
+[2020-05-01 16:18:43,404] multiqc                                            [DEBUG  ]  No MultiQC config found: /master/fcheval/local/pckg/python/miniconda3/envs/PZQ-R/lib/python3.6/site-packages/multiqc_config.yaml
+[2020-05-01 16:18:43,404] multiqc                                            [DEBUG  ]  No MultiQC config found: /master/fcheval/.multiqc_config.yaml
+[2020-05-01 16:18:43,404] multiqc                                            [DEBUG  ]  No MultiQC config found: multiqc_config.yaml
+[2020-05-01 16:18:43,404] multiqc                                            [DEBUG  ]  Command used: /master/fcheval/local/pckg/python/miniconda3/envs/PZQ-R/bin/multiqc -ip -o results/1-report/ data/libraries
+[2020-05-01 16:18:44,047] multiqc                                            [DEBUG  ]  Latest MultiQC version is v1.8
+[2020-05-01 16:18:44,047] multiqc                                            [INFO   ]  This is MultiQC v1.8
+[2020-05-01 16:18:44,047] multiqc                                            [DEBUG  ]  Command     : /master/fcheval/local/pckg/python/miniconda3/envs/PZQ-R/bin/multiqc -ip -o results/1-report/ data/libraries
+[2020-05-01 16:18:44,047] multiqc                                            [DEBUG  ]  Working dir : /data/infectious/schistosome/06 - PZQ resistance/2020-04-19 PZQ-ES-ER juveniles RNA-seq/1-Analysis
+[2020-05-01 16:18:44,047] multiqc                                            [INFO   ]  Template    : default
+[2020-05-01 16:18:44,048] multiqc                                            [DEBUG  ]  Running Python 3.6.10 |Anaconda, Inc.| (default, Mar 25 2020, 23:51:54)  [GCC 7.3.0]
+[2020-05-01 16:18:44,048] multiqc                                            [INFO   ]  Searching   : /data/infectious/schistosome/06 - PZQ resistance/2020-04-19 PZQ-ES-ER juveniles RNA-seq/1-Analysis/data/libraries
+[2020-05-01 16:18:44,048] multiqc                                            [DEBUG  ]  Analysing modules: custom_content, conpair, peddy, methylQA, phantompeakqualtools, qualimap, preseq, quast, qorts, rna_seqc, rsem, rseqc, busco, goleft_indexcov, disambiguate, supernova, deeptools, sargasso, verifybamid, mirtrace, happy, homer, macs2, theta2, snpeff, gatk, htseq, bcftools, featureCounts, fgbio, dedup, damageprofiler, biobambam2, mtnucratio, picard, prokka, samblaster, samtools, sexdeterrmine, bamtools, jellyfish, vcftools, longranger, stacks, bbmap, bismark, biscuit, hicexplorer, hicup, hicpro, salmon, kallisto, slamdunk, star, hisat2, tophat, bowtie2, bowtie1, kat, leehom, adapterRemoval, clipandmerge, cutadapt, flexbar, trimmomatic, skewer, sortmerna, biobloomtools, fastq_screen, afterqc, fastp, fastqc, minionqc, mosdepth, clusterflow, bcl2fastq, interop, flash, seqyclean
+[2020-05-01 16:18:44,049] multiqc                                            [DEBUG  ]  Using temporary directory for creating report: /tmp/tmp8fgx6e_o
+[2020-05-01 16:18:44,382] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-juv-m.3_Log.out
+[2020-05-01 16:18:44,391] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-juv-m.3_Log.out
+[2020-05-01 16:18:44,472] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-juv-m.3_Log.progress.out
+[2020-05-01 16:18:44,479] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-juv-m.3_Log.progress.out
+[2020-05-01 16:18:44,527] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ES-RNA-juv-m.3_R2_fastqc.html
+[2020-05-01 16:18:44,528] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ES-RNA-juv-m.3_R1_fastqc.html
+[2020-05-01 16:18:44,530] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ES-RNA-juv-m.3_R1.fastq.gz
+[2020-05-01 16:18:44,530] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ES-RNA-juv-m.3_R2.fastq.gz
+[2020-05-01 16:18:44,531] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ES-RNA-juv-m.3_Aligned.sortedByCoord.out.bam
+[2020-05-01 16:18:44,645] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-juv-m.3_SJ.out.tab
+[2020-05-01 16:18:44,651] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-juv-m.3_SJ.out.tab
+[2020-05-01 16:18:44,652] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-juv-m.3_SJ.out.tab
+[2020-05-01 16:18:44,652] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-juv-m.3_SJ.out.tab
+[2020-05-01 16:18:44,652] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-juv-m.3_SJ.out.tab
+[2020-05-01 16:18:44,652] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-juv-m.3_SJ.out.tab
+[2020-05-01 16:18:44,652] multiqc                                            [DEBUG  ]  File ignored by snpeff because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-juv-m.3_SJ.out.tab
+[2020-05-01 16:18:44,652] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-juv-m.3_SJ.out.tab
+[2020-05-01 16:18:49,258] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ES-RNA-juv-m.3_Aligned.toTranscriptome.out.bam
+[2020-05-01 16:18:49,258] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ES-RNA-juv-f.2_R1.fastq.gz
+[2020-05-01 16:18:49,259] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ES-RNA-juv-f.2_Aligned.sortedByCoord.out.bam
+[2020-05-01 16:18:49,361] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-juv-f.2_SJ.out.tab
+[2020-05-01 16:18:49,369] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-juv-f.2_SJ.out.tab
+[2020-05-01 16:18:49,369] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-juv-f.2_SJ.out.tab
+[2020-05-01 16:18:49,369] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-juv-f.2_SJ.out.tab
+[2020-05-01 16:18:49,369] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-juv-f.2_SJ.out.tab
+[2020-05-01 16:18:49,369] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-juv-f.2_SJ.out.tab
+[2020-05-01 16:18:49,369] multiqc                                            [DEBUG  ]  File ignored by snpeff because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-juv-f.2_SJ.out.tab
+[2020-05-01 16:18:49,369] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-juv-f.2_SJ.out.tab
+[2020-05-01 16:18:54,588] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ES-RNA-juv-f.2_R2_fastqc.html
+[2020-05-01 16:18:54,605] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-juv-f.2_Log.progress.out
+[2020-05-01 16:18:54,612] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-juv-f.2_Log.progress.out
+[2020-05-01 16:18:54,651] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ES-RNA-juv-f.2_Aligned.toTranscriptome.out.bam
+[2020-05-01 16:18:54,654] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ES-RNA-juv-f.2_R2.fastq.gz
+[2020-05-01 16:18:54,673] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-juv-f.2_Log.out
+[2020-05-01 16:18:54,681] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-juv-f.2_Log.out
+[2020-05-01 16:18:54,738] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ES-RNA-juv-f.2_R1_fastqc.html
+[2020-05-01 16:18:54,739] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ER-RNA-adu-f.3_Aligned.sortedByCoord.out.bam
+[2020-05-01 16:18:54,739] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ER-RNA-adu-f.3_R1_fastqc.html
+[2020-05-01 16:18:54,744] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ER-RNA-adu-f.3_R1.fastq.gz
+[2020-05-01 16:18:54,745] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ER-RNA-adu-f.3_R2_fastqc.html
+[2020-05-01 16:18:54,765] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-adu-f.3_Log.out
+[2020-05-01 16:18:54,772] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-adu-f.3_Log.out
+[2020-05-01 16:18:54,948] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-adu-f.3_SJ.out.tab
+[2020-05-01 16:18:54,954] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-adu-f.3_SJ.out.tab
+[2020-05-01 16:18:54,955] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-adu-f.3_SJ.out.tab
+[2020-05-01 16:18:54,955] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-adu-f.3_SJ.out.tab
+[2020-05-01 16:18:54,955] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-adu-f.3_SJ.out.tab
+[2020-05-01 16:18:54,955] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-adu-f.3_SJ.out.tab
+[2020-05-01 16:18:55,029] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-adu-f.3_SJ.out.tab
+[2020-05-01 16:18:59,006] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-adu-f.3_Log.progress.out
+[2020-05-01 16:18:59,012] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-adu-f.3_Log.progress.out
+[2020-05-01 16:18:59,055] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ER-RNA-adu-f.3_R2.fastq.gz
+[2020-05-01 16:18:59,055] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ER-RNA-adu-f.3_Aligned.toTranscriptome.out.bam
+[2020-05-01 16:18:59,056] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ER-RNA-juv-m.3_R2.fastq.gz
+[2020-05-01 16:18:59,074] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-juv-m.3_Log.out
+[2020-05-01 16:18:59,080] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-juv-m.3_Log.out
+[2020-05-01 16:18:59,124] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ER-RNA-juv-m.3_R1_fastqc.html
+[2020-05-01 16:18:59,126] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ER-RNA-juv-m.3_Aligned.toTranscriptome.out.bam
+[2020-05-01 16:18:59,126] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ER-RNA-juv-m.3_Aligned.sortedByCoord.out.bam
+[2020-05-01 16:18:59,144] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-juv-m.3_Log.progress.out
+[2020-05-01 16:18:59,151] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-juv-m.3_Log.progress.out
+[2020-05-01 16:18:59,288] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-juv-m.3_SJ.out.tab
+[2020-05-01 16:18:59,294] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-juv-m.3_SJ.out.tab
+[2020-05-01 16:18:59,294] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-juv-m.3_SJ.out.tab
+[2020-05-01 16:18:59,295] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-juv-m.3_SJ.out.tab
+[2020-05-01 16:18:59,295] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-juv-m.3_SJ.out.tab
+[2020-05-01 16:18:59,295] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-juv-m.3_SJ.out.tab
+[2020-05-01 16:18:59,295] multiqc                                            [DEBUG  ]  File ignored by snpeff because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-juv-m.3_SJ.out.tab
+[2020-05-01 16:18:59,295] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-juv-m.3_SJ.out.tab
+[2020-05-01 16:19:04,428] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ER-RNA-juv-m.3_R2_fastqc.html
+[2020-05-01 16:19:04,428] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ER-RNA-juv-m.3_R1.fastq.gz
+[2020-05-01 16:19:04,428] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ER-RNA-adu-f.1_R1_fastqc.html
+[2020-05-01 16:19:04,429] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ER-RNA-adu-f.1_Aligned.toTranscriptome.out.bam
+[2020-05-01 16:19:04,431] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ER-RNA-adu-f.1_Aligned.sortedByCoord.out.bam
+[2020-05-01 16:19:04,432] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ER-RNA-adu-f.1_R2_fastqc.html
+[2020-05-01 16:19:04,432] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ER-RNA-adu-f.1_R1.fastq.gz
+[2020-05-01 16:19:04,435] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ER-RNA-adu-f.1_R2.fastq.gz
+[2020-05-01 16:19:04,454] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-adu-f.1_Log.progress.out
+[2020-05-01 16:19:04,462] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-adu-f.1_Log.progress.out
+[2020-05-01 16:19:04,539] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-adu-f.1_Log.out
+[2020-05-01 16:19:04,547] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-adu-f.1_Log.out
+[2020-05-01 16:19:04,718] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-adu-f.1_SJ.out.tab
+[2020-05-01 16:19:04,725] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-adu-f.1_SJ.out.tab
+[2020-05-01 16:19:04,725] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-adu-f.1_SJ.out.tab
+[2020-05-01 16:19:04,726] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-adu-f.1_SJ.out.tab
+[2020-05-01 16:19:04,726] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-adu-f.1_SJ.out.tab
+[2020-05-01 16:19:04,726] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-adu-f.1_SJ.out.tab
+[2020-05-01 16:19:04,798] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-adu-f.1_SJ.out.tab
+[2020-05-01 16:19:08,454] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ER-RNA-juv-f.3_Aligned.sortedByCoord.out.bam
+[2020-05-01 16:19:08,456] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ER-RNA-juv-f.3_R1_fastqc.html
+[2020-05-01 16:19:08,476] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-juv-f.3_Log.out
+[2020-05-01 16:19:08,483] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-juv-f.3_Log.out
+[2020-05-01 16:19:08,559] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-juv-f.3_Log.progress.out
+[2020-05-01 16:19:08,566] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-juv-f.3_Log.progress.out
+[2020-05-01 16:19:08,618] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ER-RNA-juv-f.3_R2_fastqc.html
+[2020-05-01 16:19:08,621] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ER-RNA-juv-f.3_Aligned.toTranscriptome.out.bam
+[2020-05-01 16:19:08,621] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ER-RNA-juv-f.3_R1.fastq.gz
+[2020-05-01 16:19:08,759] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-juv-f.3_SJ.out.tab
+[2020-05-01 16:19:08,767] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-juv-f.3_SJ.out.tab
+[2020-05-01 16:19:08,767] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-juv-f.3_SJ.out.tab
+[2020-05-01 16:19:08,767] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-juv-f.3_SJ.out.tab
+[2020-05-01 16:19:08,767] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-juv-f.3_SJ.out.tab
+[2020-05-01 16:19:08,767] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-juv-f.3_SJ.out.tab
+[2020-05-01 16:19:08,767] multiqc                                            [DEBUG  ]  File ignored by snpeff because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-juv-f.3_SJ.out.tab
+[2020-05-01 16:19:08,767] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-juv-f.3_SJ.out.tab
+[2020-05-01 16:19:13,643] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ER-RNA-juv-f.3_R2.fastq.gz
+[2020-05-01 16:19:13,664] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-juv-f.3_Log.progress.out
+[2020-05-01 16:19:13,671] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-juv-f.3_Log.progress.out
+[2020-05-01 16:19:13,709] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ES-RNA-juv-f.3_R2_fastqc.html
+[2020-05-01 16:19:13,710] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ES-RNA-juv-f.3_Aligned.sortedByCoord.out.bam
+[2020-05-01 16:19:13,710] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ES-RNA-juv-f.3_R2.fastq.gz
+[2020-05-01 16:19:13,710] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ES-RNA-juv-f.3_Aligned.toTranscriptome.out.bam
+[2020-05-01 16:19:13,808] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-juv-f.3_SJ.out.tab
+[2020-05-01 16:19:13,814] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-juv-f.3_SJ.out.tab
+[2020-05-01 16:19:13,814] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-juv-f.3_SJ.out.tab
+[2020-05-01 16:19:13,815] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-juv-f.3_SJ.out.tab
+[2020-05-01 16:19:13,815] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-juv-f.3_SJ.out.tab
+[2020-05-01 16:19:13,815] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-juv-f.3_SJ.out.tab
+[2020-05-01 16:19:13,815] multiqc                                            [DEBUG  ]  File ignored by snpeff because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-juv-f.3_SJ.out.tab
+[2020-05-01 16:19:13,815] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-juv-f.3_SJ.out.tab
+[2020-05-01 16:19:18,961] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-juv-f.3_Log.out
+[2020-05-01 16:19:18,969] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-juv-f.3_Log.out
+[2020-05-01 16:19:19,028] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ES-RNA-juv-f.3_R1_fastqc.html
+[2020-05-01 16:19:19,031] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ES-RNA-juv-f.3_R1.fastq.gz
+[2020-05-01 16:19:19,032] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ER-RNA-juv-f.1_Aligned.toTranscriptome.out.bam
+[2020-05-01 16:19:19,035] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ER-RNA-juv-f.1_R2.fastq.gz
+[2020-05-01 16:19:19,035] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ER-RNA-juv-f.1_R1.fastq.gz
+[2020-05-01 16:19:19,036] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ER-RNA-juv-f.1_R2_fastqc.html
+[2020-05-01 16:19:19,036] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ER-RNA-juv-f.1_Aligned.sortedByCoord.out.bam
+[2020-05-01 16:19:19,060] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-juv-f.1_Log.out
+[2020-05-01 16:19:19,068] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-juv-f.1_Log.out
+[2020-05-01 16:19:19,278] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-juv-f.1_SJ.out.tab
+[2020-05-01 16:19:19,285] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-juv-f.1_SJ.out.tab
+[2020-05-01 16:19:19,285] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-juv-f.1_SJ.out.tab
+[2020-05-01 16:19:19,285] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-juv-f.1_SJ.out.tab
+[2020-05-01 16:19:19,286] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-juv-f.1_SJ.out.tab
+[2020-05-01 16:19:19,286] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-juv-f.1_SJ.out.tab
+[2020-05-01 16:19:19,286] multiqc                                            [DEBUG  ]  File ignored by snpeff because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-juv-f.1_SJ.out.tab
+[2020-05-01 16:19:19,286] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-juv-f.1_SJ.out.tab
+[2020-05-01 16:19:24,761] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-juv-f.1_Log.progress.out
+[2020-05-01 16:19:24,769] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-juv-f.1_Log.progress.out
+[2020-05-01 16:19:24,826] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ER-RNA-juv-f.1_R1_fastqc.html
+[2020-05-01 16:19:24,943] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-adu-m.2_SJ.out.tab
+[2020-05-01 16:19:24,950] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-adu-m.2_SJ.out.tab
+[2020-05-01 16:19:24,951] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-adu-m.2_SJ.out.tab
+[2020-05-01 16:19:24,951] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-adu-m.2_SJ.out.tab
+[2020-05-01 16:19:24,951] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-adu-m.2_SJ.out.tab
+[2020-05-01 16:19:24,951] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-adu-m.2_SJ.out.tab
+[2020-05-01 16:19:25,054] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-adu-m.2_SJ.out.tab
+[2020-05-01 16:19:29,171] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ER-RNA-adu-m.2_R2.fastq.gz
+[2020-05-01 16:19:29,191] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-adu-m.2_Log.out
+[2020-05-01 16:19:29,198] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-adu-m.2_Log.out
+[2020-05-01 16:19:29,243] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ER-RNA-adu-m.2_Aligned.toTranscriptome.out.bam
+[2020-05-01 16:19:29,243] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ER-RNA-adu-m.2_R1.fastq.gz
+[2020-05-01 16:19:29,264] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-adu-m.2_Log.progress.out
+[2020-05-01 16:19:29,270] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-adu-m.2_Log.progress.out
+[2020-05-01 16:19:29,323] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ER-RNA-adu-m.2_R2_fastqc.html
+[2020-05-01 16:19:29,323] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ER-RNA-adu-m.2_Aligned.sortedByCoord.out.bam
+[2020-05-01 16:19:29,324] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ER-RNA-adu-m.2_R1_fastqc.html
+[2020-05-01 16:19:29,325] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ER-RNA-juv-f.2_Aligned.toTranscriptome.out.bam
+[2020-05-01 16:19:29,329] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ER-RNA-juv-f.2_R2_fastqc.html
+[2020-05-01 16:19:29,329] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ER-RNA-juv-f.2_R1.fastq.gz
+[2020-05-01 16:19:29,349] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-juv-f.2_Log.out
+[2020-05-01 16:19:29,356] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-juv-f.2_Log.out
+[2020-05-01 16:19:29,415] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ER-RNA-juv-f.2_R2.fastq.gz
+[2020-05-01 16:19:29,417] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ER-RNA-juv-f.2_R1_fastqc.html
+[2020-05-01 16:19:29,440] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-juv-f.2_Log.progress.out
+[2020-05-01 16:19:29,447] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-juv-f.2_Log.progress.out
+[2020-05-01 16:19:29,639] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-juv-f.2_SJ.out.tab
+[2020-05-01 16:19:29,645] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-juv-f.2_SJ.out.tab
+[2020-05-01 16:19:29,645] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-juv-f.2_SJ.out.tab
+[2020-05-01 16:19:29,645] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-juv-f.2_SJ.out.tab
+[2020-05-01 16:19:29,646] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-juv-f.2_SJ.out.tab
+[2020-05-01 16:19:29,646] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-juv-f.2_SJ.out.tab
+[2020-05-01 16:19:29,646] multiqc                                            [DEBUG  ]  File ignored by snpeff because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-juv-f.2_SJ.out.tab
+[2020-05-01 16:19:29,646] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-juv-f.2_SJ.out.tab
+[2020-05-01 16:19:34,512] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ER-RNA-juv-f.2_Aligned.sortedByCoord.out.bam
+[2020-05-01 16:19:34,513] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ES-RNA-adu-f.3_R2_fastqc.html
+[2020-05-01 16:19:34,514] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ES-RNA-adu-f.3_R1.fastq.gz
+[2020-05-01 16:19:34,514] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ES-RNA-adu-f.3_R2.fastq.gz
+[2020-05-01 16:19:34,515] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ES-RNA-adu-f.3_Aligned.toTranscriptome.out.bam
+[2020-05-01 16:19:34,543] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-adu-f.3_Log.progress.out
+[2020-05-01 16:19:34,550] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-adu-f.3_Log.progress.out
+[2020-05-01 16:19:34,650] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-adu-f.3_Log.out
+[2020-05-01 16:19:34,657] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-adu-f.3_Log.out
+[2020-05-01 16:19:34,717] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ES-RNA-adu-f.3_Aligned.sortedByCoord.out.bam
+[2020-05-01 16:19:34,717] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ES-RNA-adu-f.3_R1_fastqc.html
+[2020-05-01 16:19:34,846] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-adu-f.3_SJ.out.tab
+[2020-05-01 16:19:34,853] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-adu-f.3_SJ.out.tab
+[2020-05-01 16:19:34,853] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-adu-f.3_SJ.out.tab
+[2020-05-01 16:19:34,853] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-adu-f.3_SJ.out.tab
+[2020-05-01 16:19:34,853] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-adu-f.3_SJ.out.tab
+[2020-05-01 16:19:34,853] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-adu-f.3_SJ.out.tab
+[2020-05-01 16:19:34,853] multiqc                                            [DEBUG  ]  File ignored by snpeff because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-adu-f.3_SJ.out.tab
+[2020-05-01 16:19:34,853] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-adu-f.3_SJ.out.tab
+[2020-05-01 16:19:39,412] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ES-RNA-adu-f.2_Aligned.sortedByCoord.out.bam
+[2020-05-01 16:19:39,413] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ES-RNA-adu-f.2_R1_fastqc.html
+[2020-05-01 16:19:39,417] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ES-RNA-adu-f.2_R2_fastqc.html
+[2020-05-01 16:19:39,418] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ES-RNA-adu-f.2_R2.fastq.gz
+[2020-05-01 16:19:39,439] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-adu-f.2_Log.progress.out
+[2020-05-01 16:19:39,447] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-adu-f.2_Log.progress.out
+[2020-05-01 16:19:39,516] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ES-RNA-adu-f.2_R1.fastq.gz
+[2020-05-01 16:19:39,537] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-adu-f.2_Log.out
+[2020-05-01 16:19:39,544] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-adu-f.2_Log.out
+[2020-05-01 16:19:39,723] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-adu-f.2_SJ.out.tab
+[2020-05-01 16:19:39,731] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-adu-f.2_SJ.out.tab
+[2020-05-01 16:19:39,731] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-adu-f.2_SJ.out.tab
+[2020-05-01 16:19:39,731] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-adu-f.2_SJ.out.tab
+[2020-05-01 16:19:39,732] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-adu-f.2_SJ.out.tab
+[2020-05-01 16:19:39,732] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-adu-f.2_SJ.out.tab
+[2020-05-01 16:19:39,829] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-adu-f.2_SJ.out.tab
+[2020-05-01 16:19:43,854] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ES-RNA-adu-f.2_Aligned.toTranscriptome.out.bam
+[2020-05-01 16:19:43,932] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-adu-f.1_SJ.out.tab
+[2020-05-01 16:19:43,939] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-adu-f.1_SJ.out.tab
+[2020-05-01 16:19:43,939] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-adu-f.1_SJ.out.tab
+[2020-05-01 16:19:43,939] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-adu-f.1_SJ.out.tab
+[2020-05-01 16:19:43,939] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-adu-f.1_SJ.out.tab
+[2020-05-01 16:19:43,940] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-adu-f.1_SJ.out.tab
+[2020-05-01 16:19:43,997] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-adu-f.1_SJ.out.tab
+[2020-05-01 16:19:47,662] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ES-RNA-adu-f.1_Aligned.sortedByCoord.out.bam
+[2020-05-01 16:19:47,666] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ES-RNA-adu-f.1_R2.fastq.gz
+[2020-05-01 16:19:47,666] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ES-RNA-adu-f.1_R2_fastqc.html
+[2020-05-01 16:19:47,669] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ES-RNA-adu-f.1_R1.fastq.gz
+[2020-05-01 16:19:47,688] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-adu-f.1_Log.progress.out
+[2020-05-01 16:19:47,695] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-adu-f.1_Log.progress.out
+[2020-05-01 16:19:47,750] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ES-RNA-adu-f.1_R1_fastqc.html
+[2020-05-01 16:19:47,770] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-adu-f.1_Log.out
+[2020-05-01 16:19:47,777] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-adu-f.1_Log.out
+[2020-05-01 16:19:47,837] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ES-RNA-adu-f.1_Aligned.toTranscriptome.out.bam
+[2020-05-01 16:19:47,860] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-adu-f.2_Log.out
+[2020-05-01 16:19:47,868] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-adu-f.2_Log.out
+[2020-05-01 16:19:47,931] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ER-RNA-adu-f.2_R1.fastq.gz
+[2020-05-01 16:19:47,932] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ER-RNA-adu-f.2_R2_fastqc.html
+[2020-05-01 16:19:47,933] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ER-RNA-adu-f.2_Aligned.sortedByCoord.out.bam
+[2020-05-01 16:19:47,934] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ER-RNA-adu-f.2_R2.fastq.gz
+[2020-05-01 16:19:47,935] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ER-RNA-adu-f.2_Aligned.toTranscriptome.out.bam
+[2020-05-01 16:19:47,936] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ER-RNA-adu-f.2_R1_fastqc.html
+[2020-05-01 16:19:47,957] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-adu-f.2_Log.progress.out
+[2020-05-01 16:19:47,965] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-adu-f.2_Log.progress.out
+[2020-05-01 16:19:48,139] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-adu-f.2_SJ.out.tab
+[2020-05-01 16:19:48,146] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-adu-f.2_SJ.out.tab
+[2020-05-01 16:19:48,146] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-adu-f.2_SJ.out.tab
+[2020-05-01 16:19:48,146] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-adu-f.2_SJ.out.tab
+[2020-05-01 16:19:48,146] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-adu-f.2_SJ.out.tab
+[2020-05-01 16:19:48,146] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-adu-f.2_SJ.out.tab
+[2020-05-01 16:19:48,219] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-adu-f.2_SJ.out.tab
+[2020-05-01 16:19:52,270] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-juv-f.1_Log.progress.out
+[2020-05-01 16:19:52,277] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-juv-f.1_Log.progress.out
+[2020-05-01 16:19:52,319] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ES-RNA-juv-f.1_R2.fastq.gz
+[2020-05-01 16:19:52,320] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ES-RNA-juv-f.1_R1_fastqc.html
+[2020-05-01 16:19:52,321] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ES-RNA-juv-f.1_R2_fastqc.html
+[2020-05-01 16:19:52,409] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-juv-f.1_SJ.out.tab
+[2020-05-01 16:19:52,416] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-juv-f.1_SJ.out.tab
+[2020-05-01 16:19:52,416] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-juv-f.1_SJ.out.tab
+[2020-05-01 16:19:52,416] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-juv-f.1_SJ.out.tab
+[2020-05-01 16:19:52,416] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-juv-f.1_SJ.out.tab
+[2020-05-01 16:19:52,416] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-juv-f.1_SJ.out.tab
+[2020-05-01 16:19:52,416] multiqc                                            [DEBUG  ]  File ignored by snpeff because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-juv-f.1_SJ.out.tab
+[2020-05-01 16:19:52,416] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-juv-f.1_SJ.out.tab
+[2020-05-01 16:19:56,915] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ES-RNA-juv-f.1_R1.fastq.gz
+[2020-05-01 16:19:56,916] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ES-RNA-juv-f.1_Aligned.toTranscriptome.out.bam
+[2020-05-01 16:19:56,917] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ES-RNA-juv-f.1_Aligned.sortedByCoord.out.bam
+[2020-05-01 16:19:56,935] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-juv-f.1_Log.out
+[2020-05-01 16:19:56,941] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-juv-f.1_Log.out
+[2020-05-01 16:19:57,015] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-adu-m.3_Log.progress.out
+[2020-05-01 16:19:57,023] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-adu-m.3_Log.progress.out
+[2020-05-01 16:19:57,085] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ES-RNA-adu-m.3_R2_fastqc.html
+[2020-05-01 16:19:57,086] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ES-RNA-adu-m.3_R1.fastq.gz
+[2020-05-01 16:19:57,087] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ES-RNA-adu-m.3_R2.fastq.gz
+[2020-05-01 16:19:57,203] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-adu-m.3_SJ.out.tab
+[2020-05-01 16:19:57,210] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-adu-m.3_SJ.out.tab
+[2020-05-01 16:19:57,210] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-adu-m.3_SJ.out.tab
+[2020-05-01 16:19:57,210] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-adu-m.3_SJ.out.tab
+[2020-05-01 16:19:57,210] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-adu-m.3_SJ.out.tab
+[2020-05-01 16:19:57,210] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-adu-m.3_SJ.out.tab
+[2020-05-01 16:19:57,289] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-adu-m.3_SJ.out.tab
+[2020-05-01 16:20:01,231] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ES-RNA-adu-m.3_Aligned.sortedByCoord.out.bam
+[2020-05-01 16:20:01,231] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ES-RNA-adu-m.3_Aligned.toTranscriptome.out.bam
+[2020-05-01 16:20:01,232] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ES-RNA-adu-m.3_R1_fastqc.html
+[2020-05-01 16:20:01,252] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-adu-m.3_Log.out
+[2020-05-01 16:20:01,259] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-adu-m.3_Log.out
+[2020-05-01 16:31:55,849] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ER-RNA-adu-m.3_R1_fastqc.html
+[2020-05-01 16:31:55,870] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-adu-m.3_Log.progress.out
+[2020-05-01 16:31:55,878] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-adu-m.3_Log.progress.out
+[2020-05-01 16:31:55,936] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ER-RNA-adu-m.3_R1.fastq.gz
+[2020-05-01 16:31:55,937] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ER-RNA-adu-m.3_Aligned.toTranscriptome.out.bam
+[2020-05-01 16:31:55,962] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-adu-m.3_Log.out
+[2020-05-01 16:31:55,970] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-adu-m.3_Log.out
+[2020-05-01 16:31:56,139] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-adu-m.3_SJ.out.tab
+[2020-05-01 16:31:56,146] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-adu-m.3_SJ.out.tab
+[2020-05-01 16:31:56,146] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-adu-m.3_SJ.out.tab
+[2020-05-01 16:31:56,146] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-adu-m.3_SJ.out.tab
+[2020-05-01 16:31:56,147] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-adu-m.3_SJ.out.tab
+[2020-05-01 16:31:56,147] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-adu-m.3_SJ.out.tab
+[2020-05-01 16:31:56,218] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-adu-m.3_SJ.out.tab
+[2020-05-01 16:31:59,817] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ER-RNA-adu-m.3_R2_fastqc.html
+[2020-05-01 16:31:59,819] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ER-RNA-adu-m.3_R2.fastq.gz
+[2020-05-01 16:31:59,819] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ER-RNA-adu-m.3_Aligned.sortedByCoord.out.bam
+[2020-05-01 16:31:59,821] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ES-RNA-adu-m.1_Aligned.toTranscriptome.out.bam
+[2020-05-01 16:31:59,823] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ES-RNA-adu-m.1_Aligned.sortedByCoord.out.bam
+[2020-05-01 16:31:59,843] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-adu-m.1_Log.progress.out
+[2020-05-01 16:31:59,850] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-adu-m.1_Log.progress.out
+[2020-05-01 16:31:59,969] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-adu-m.1_SJ.out.tab
+[2020-05-01 16:31:59,976] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-adu-m.1_SJ.out.tab
+[2020-05-01 16:31:59,976] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-adu-m.1_SJ.out.tab
+[2020-05-01 16:31:59,976] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-adu-m.1_SJ.out.tab
+[2020-05-01 16:31:59,976] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-adu-m.1_SJ.out.tab
+[2020-05-01 16:31:59,976] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-adu-m.1_SJ.out.tab
+[2020-05-01 16:32:00,034] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-adu-m.1_SJ.out.tab
+[2020-05-01 16:32:03,733] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ES-RNA-adu-m.1_R2_fastqc.html
+[2020-05-01 16:32:03,735] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ES-RNA-adu-m.1_R2.fastq.gz
+[2020-05-01 16:32:03,754] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-adu-m.1_Log.out
+[2020-05-01 16:32:03,762] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-adu-m.1_Log.out
+[2020-05-01 16:32:03,809] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ES-RNA-adu-m.1_R1_fastqc.html
+[2020-05-01 16:32:03,809] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ES-RNA-adu-m.1_R1.fastq.gz
+[2020-05-01 16:32:03,902] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-juv-m.2_SJ.out.tab
+[2020-05-01 16:32:03,909] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-juv-m.2_SJ.out.tab
+[2020-05-01 16:32:03,910] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-juv-m.2_SJ.out.tab
+[2020-05-01 16:32:03,910] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-juv-m.2_SJ.out.tab
+[2020-05-01 16:32:03,910] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-juv-m.2_SJ.out.tab
+[2020-05-01 16:32:03,910] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-juv-m.2_SJ.out.tab
+[2020-05-01 16:32:03,910] multiqc                                            [DEBUG  ]  File ignored by snpeff because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-juv-m.2_SJ.out.tab
+[2020-05-01 16:32:03,910] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-juv-m.2_SJ.out.tab
+[2020-05-01 16:32:08,512] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ES-RNA-juv-m.2_R2.fastq.gz
+[2020-05-01 16:32:08,532] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-juv-m.2_Log.progress.out
+[2020-05-01 16:32:08,540] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-juv-m.2_Log.progress.out
+[2020-05-01 16:32:08,599] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ES-RNA-juv-m.2_Aligned.sortedByCoord.out.bam
+[2020-05-01 16:32:08,620] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-juv-m.2_Log.out
+[2020-05-01 16:32:08,627] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-juv-m.2_Log.out
+[2020-05-01 16:32:08,687] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ES-RNA-juv-m.2_Aligned.toTranscriptome.out.bam
+[2020-05-01 16:32:08,687] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ES-RNA-juv-m.2_R1_fastqc.html
+[2020-05-01 16:32:08,688] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ES-RNA-juv-m.2_R1.fastq.gz
+[2020-05-01 16:32:08,689] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ES-RNA-juv-m.2_R2_fastqc.html
+[2020-05-01 16:32:08,696] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ER-RNA-adu-m.1_Aligned.toTranscriptome.out.bam
+[2020-05-01 16:32:08,697] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ER-RNA-adu-m.1_R2_fastqc.html
+[2020-05-01 16:32:08,718] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-adu-m.1_Log.progress.out
+[2020-05-01 16:32:08,726] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-adu-m.1_Log.progress.out
+[2020-05-01 16:32:08,923] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-adu-m.1_SJ.out.tab
+[2020-05-01 16:32:08,932] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-adu-m.1_SJ.out.tab
+[2020-05-01 16:32:08,932] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-adu-m.1_SJ.out.tab
+[2020-05-01 16:32:08,932] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-adu-m.1_SJ.out.tab
+[2020-05-01 16:32:08,932] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-adu-m.1_SJ.out.tab
+[2020-05-01 16:32:08,932] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-adu-m.1_SJ.out.tab
+[2020-05-01 16:32:08,932] multiqc                                            [DEBUG  ]  File ignored by snpeff because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-adu-m.1_SJ.out.tab
+[2020-05-01 16:32:08,932] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-adu-m.1_SJ.out.tab
+[2020-05-01 16:32:13,524] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ER-RNA-adu-m.1_Aligned.sortedByCoord.out.bam
+[2020-05-01 16:32:13,527] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ER-RNA-adu-m.1_R2.fastq.gz
+[2020-05-01 16:32:13,547] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-adu-m.1_Log.out
+[2020-05-01 16:32:13,554] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-adu-m.1_Log.out
+[2020-05-01 16:32:13,600] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ER-RNA-adu-m.1_R1_fastqc.html
+[2020-05-01 16:32:13,601] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ER-RNA-adu-m.1_R1.fastq.gz
+[2020-05-01 16:32:13,602] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ER-RNA-juv-m.1_R1_fastqc.html
+[2020-05-01 16:32:13,603] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ER-RNA-juv-m.1_R2.fastq.gz
+[2020-05-01 16:32:13,604] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ER-RNA-juv-m.1_Aligned.sortedByCoord.out.bam
+[2020-05-01 16:32:13,623] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-juv-m.1_Log.progress.out
+[2020-05-01 16:32:13,629] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-juv-m.1_Log.progress.out
+[2020-05-01 16:32:13,756] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-juv-m.1_SJ.out.tab
+[2020-05-01 16:32:13,763] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-juv-m.1_SJ.out.tab
+[2020-05-01 16:32:13,763] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-juv-m.1_SJ.out.tab
+[2020-05-01 16:32:13,763] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-juv-m.1_SJ.out.tab
+[2020-05-01 16:32:13,763] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-juv-m.1_SJ.out.tab
+[2020-05-01 16:32:13,763] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-juv-m.1_SJ.out.tab
+[2020-05-01 16:32:13,763] multiqc                                            [DEBUG  ]  File ignored by snpeff because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-juv-m.1_SJ.out.tab
+[2020-05-01 16:32:13,763] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-juv-m.1_SJ.out.tab
+[2020-05-01 16:32:18,388] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ER-RNA-juv-m.1_Aligned.toTranscriptome.out.bam
+[2020-05-01 16:32:18,409] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-juv-m.1_Log.out
+[2020-05-01 16:32:18,416] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-juv-m.1_Log.out
+[2020-05-01 16:32:18,461] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ER-RNA-juv-m.1_R2_fastqc.html
+[2020-05-01 16:32:18,462] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ER-RNA-juv-m.1_R1.fastq.gz
+[2020-05-01 16:32:18,554] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-juv-m.1_SJ.out.tab
+[2020-05-01 16:32:18,561] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-juv-m.1_SJ.out.tab
+[2020-05-01 16:32:18,561] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-juv-m.1_SJ.out.tab
+[2020-05-01 16:32:18,561] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-juv-m.1_SJ.out.tab
+[2020-05-01 16:32:18,561] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-juv-m.1_SJ.out.tab
+[2020-05-01 16:32:18,562] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-juv-m.1_SJ.out.tab
+[2020-05-01 16:32:18,562] multiqc                                            [DEBUG  ]  File ignored by snpeff because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-juv-m.1_SJ.out.tab
+[2020-05-01 16:32:18,562] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-juv-m.1_SJ.out.tab
+[2020-05-01 16:32:23,331] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ES-RNA-juv-m.1_R1.fastq.gz
+[2020-05-01 16:32:23,331] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ES-RNA-juv-m.1_R2.fastq.gz
+[2020-05-01 16:32:23,350] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-juv-m.1_Log.progress.out
+[2020-05-01 16:32:23,358] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-juv-m.1_Log.progress.out
+[2020-05-01 16:32:23,414] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ES-RNA-juv-m.1_R2_fastqc.html
+[2020-05-01 16:32:23,414] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ES-RNA-juv-m.1_Aligned.sortedByCoord.out.bam
+[2020-05-01 16:32:23,435] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-juv-m.1_Log.out
+[2020-05-01 16:32:23,443] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-juv-m.1_Log.out
+[2020-05-01 16:32:23,504] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ES-RNA-juv-m.1_R1_fastqc.html
+[2020-05-01 16:32:23,508] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ES-RNA-juv-m.1_Aligned.toTranscriptome.out.bam
+[2020-05-01 16:32:23,509] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ER-RNA-juv-m.2_R1_fastqc.html
+[2020-05-01 16:32:23,513] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ER-RNA-juv-m.2_R2_fastqc.html
+[2020-05-01 16:32:23,514] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ER-RNA-juv-m.2_R1.fastq.gz
+[2020-05-01 16:32:23,537] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-juv-m.2_Log.progress.out
+[2020-05-01 16:32:23,544] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-juv-m.2_Log.progress.out
+[2020-05-01 16:32:23,597] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ER-RNA-juv-m.2_Aligned.toTranscriptome.out.bam
+[2020-05-01 16:32:23,617] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-juv-m.2_Log.out
+[2020-05-01 16:32:23,624] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-juv-m.2_Log.out
+[2020-05-01 16:32:23,681] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ER-RNA-juv-m.2_Aligned.sortedByCoord.out.bam
+[2020-05-01 16:32:23,823] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-juv-m.2_SJ.out.tab
+[2020-05-01 16:32:23,829] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-juv-m.2_SJ.out.tab
+[2020-05-01 16:32:23,830] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-juv-m.2_SJ.out.tab
+[2020-05-01 16:32:23,830] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-juv-m.2_SJ.out.tab
+[2020-05-01 16:32:23,830] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-juv-m.2_SJ.out.tab
+[2020-05-01 16:32:23,830] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-juv-m.2_SJ.out.tab
+[2020-05-01 16:32:23,830] multiqc                                            [DEBUG  ]  File ignored by snpeff because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-juv-m.2_SJ.out.tab
+[2020-05-01 16:32:23,830] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: SmLE-PZQ-ER-RNA-juv-m.2_SJ.out.tab
+[2020-05-01 16:32:28,958] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ER-RNA-juv-m.2_R2.fastq.gz
+[2020-05-01 16:32:28,960] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ES-RNA-adu-m.2_R1_fastqc.html
+[2020-05-01 16:32:28,980] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-adu-m.2_Log.out
+[2020-05-01 16:32:28,987] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-adu-m.2_Log.out
+[2020-05-01 16:32:29,034] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ES-RNA-adu-m.2_R1.fastq.gz
+[2020-05-01 16:32:29,053] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-adu-m.2_Log.progress.out
+[2020-05-01 16:32:29,060] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-adu-m.2_Log.progress.out
+[2020-05-01 16:32:29,185] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-adu-m.2_SJ.out.tab
+[2020-05-01 16:32:29,192] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-adu-m.2_SJ.out.tab
+[2020-05-01 16:32:29,192] multiqc                                            [DEBUG  ]  File ignored by rseqc/bam_stat because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-adu-m.2_SJ.out.tab
+[2020-05-01 16:32:29,193] multiqc                                            [DEBUG  ]  File ignored by rseqc/junction_annotation because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-adu-m.2_SJ.out.tab
+[2020-05-01 16:32:29,193] multiqc                                            [DEBUG  ]  File ignored by rseqc/read_distribution because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-adu-m.2_SJ.out.tab
+[2020-05-01 16:32:29,193] multiqc                                            [DEBUG  ]  File ignored by rseqc/infer_experiment because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-adu-m.2_SJ.out.tab
+[2020-05-01 16:32:29,249] multiqc                                            [DEBUG  ]  File ignored by stacks/sumstats because it exceeded search pattern filesize limit: SmLE-PZQ-ES-RNA-adu-m.2_SJ.out.tab
+[2020-05-01 16:32:32,859] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ES-RNA-adu-m.2_Aligned.toTranscriptome.out.bam
+[2020-05-01 16:32:32,859] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ES-RNA-adu-m.2_R2_fastqc.html
+[2020-05-01 16:32:32,860] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ES-RNA-adu-m.2_Aligned.sortedByCoord.out.bam
+[2020-05-01 16:32:32,860] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: SmLE-PZQ-ES-RNA-adu-m.2_R2.fastq.gz
+[2020-05-01 16:32:33,441] multiqc.plots.bargraph                             [DEBUG  ]  Using matplotlib version 3.1.1
+[2020-05-01 16:32:33,442] multiqc.plots.linegraph                            [DEBUG  ]  Using matplotlib version 3.1.1
+[2020-05-01 16:32:33,445] multiqc                                            [DEBUG  ]  No samples found: custom_content
+[2020-05-01 16:32:33,455] multiqc                                            [DEBUG  ]  No samples found: conpair
+[2020-05-01 16:32:33,465] multiqc                                            [DEBUG  ]  No samples found: peddy
+[2020-05-01 16:32:33,475] multiqc                                            [DEBUG  ]  No samples found: methylQA
+[2020-05-01 16:32:33,484] multiqc                                            [DEBUG  ]  No samples found: phantompeakqualtools
+[2020-05-01 16:32:33,497] multiqc                                            [DEBUG  ]  No samples found: qualimap
+[2020-05-01 16:32:33,507] multiqc                                            [DEBUG  ]  No samples found: preseq
+[2020-05-01 16:32:33,518] multiqc                                            [DEBUG  ]  No samples found: quast
+[2020-05-01 16:32:33,529] multiqc                                            [DEBUG  ]  No samples found: qorts
+[2020-05-01 16:32:33,541] multiqc                                            [DEBUG  ]  No samples found: rna_seqc
+[2020-05-01 16:32:33,551] multiqc                                            [DEBUG  ]  No samples found: rsem
+[2020-05-01 16:32:33,574] multiqc                                            [DEBUG  ]  No samples found: rseqc
+[2020-05-01 16:32:33,585] multiqc                                            [DEBUG  ]  No samples found: busco
+[2020-05-01 16:32:33,596] multiqc                                            [DEBUG  ]  No samples found: goleft_indexcov
+[2020-05-01 16:32:33,608] multiqc                                            [DEBUG  ]  No samples found: disambiguate
+[2020-05-01 16:32:33,619] multiqc                                            [DEBUG  ]  No samples found: supernova
+[2020-05-01 16:32:33,643] multiqc                                            [DEBUG  ]  No samples found: deeptools
+[2020-05-01 16:32:33,654] multiqc                                            [DEBUG  ]  No samples found: sargasso
+[2020-05-01 16:32:33,665] multiqc                                            [DEBUG  ]  No samples found: verifybamid
+[2020-05-01 16:32:33,676] multiqc                                            [DEBUG  ]  No samples found: mirtrace
+[2020-05-01 16:32:33,687] multiqc                                            [DEBUG  ]  No samples found: happy
+[2020-05-01 16:32:33,701] multiqc                                            [DEBUG  ]  No samples found: homer
+[2020-05-01 16:32:33,711] multiqc                                            [DEBUG  ]  No samples found: macs2
+[2020-05-01 16:32:33,722] multiqc                                            [DEBUG  ]  No samples found: theta2
+[2020-05-01 16:32:33,732] multiqc                                            [DEBUG  ]  No samples found: snpeff
+[2020-05-01 16:32:33,749] multiqc                                            [DEBUG  ]  No samples found: gatk
+[2020-05-01 16:32:33,760] multiqc                                            [DEBUG  ]  No samples found: htseq
+[2020-05-01 16:32:33,772] multiqc                                            [DEBUG  ]  No samples found: bcftools
+[2020-05-01 16:32:33,782] multiqc                                            [DEBUG  ]  No samples found: featureCounts
+[2020-05-01 16:32:33,794] multiqc                                            [DEBUG  ]  No samples found: fgbio
+[2020-05-01 16:32:33,804] multiqc                                            [DEBUG  ]  No samples found: dedup
+[2020-05-01 16:32:33,815] multiqc                                            [DEBUG  ]  No samples found: damageprofiler
+[2020-05-01 16:32:33,847] multiqc                                            [DEBUG  ]  No samples found: biobambam2
+[2020-05-01 16:32:33,857] multiqc                                            [DEBUG  ]  No samples found: mtnucratio
+[2020-05-01 16:32:33,864] multiqc                                            [DEBUG  ]  No samples found: picard
+[2020-05-01 16:32:33,875] multiqc                                            [DEBUG  ]  No samples found: prokka
+[2020-05-01 16:32:33,885] multiqc                                            [DEBUG  ]  No samples found: samblaster
+[2020-05-01 16:32:33,901] multiqc                                            [DEBUG  ]  No samples found: samtools
+[2020-05-01 16:32:33,910] multiqc                                            [DEBUG  ]  No samples found: sexdeterrmine
+[2020-05-01 16:32:33,922] multiqc                                            [DEBUG  ]  No samples found: bamtools
+[2020-05-01 16:32:33,931] multiqc                                            [DEBUG  ]  No samples found: jellyfish
+[2020-05-01 16:32:33,947] multiqc                                            [DEBUG  ]  No samples found: vcftools
+[2020-05-01 16:32:33,957] multiqc                                            [DEBUG  ]  No samples found: longranger
+[2020-05-01 16:32:33,966] multiqc                                            [DEBUG  ]  No samples found: stacks
+[2020-05-01 16:32:33,993] multiqc                                            [DEBUG  ]  No samples found: bbmap
+[2020-05-01 16:32:34,005] multiqc                                            [DEBUG  ]  No samples found: bismark
+[2020-05-01 16:32:34,016] multiqc                                            [DEBUG  ]  No samples found: biscuit
+[2020-05-01 16:32:34,028] multiqc                                            [DEBUG  ]  No samples found: hicexplorer
+[2020-05-01 16:32:34,039] multiqc                                            [DEBUG  ]  No samples found: hicup
+[2020-05-01 16:32:34,051] multiqc                                            [DEBUG  ]  No samples found: hicpro
+[2020-05-01 16:32:34,062] multiqc                                            [DEBUG  ]  No samples found: salmon
+[2020-05-01 16:32:34,073] multiqc                                            [DEBUG  ]  No samples found: kallisto
+[2020-05-01 16:32:34,084] multiqc                                            [DEBUG  ]  No samples found: slamdunk
+[2020-05-01 16:32:34,184] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: SmLE-PZQ-ES-RNA-juv-m.3
+[2020-05-01 16:32:34,218] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: SmLE-PZQ-ES-RNA-juv-f.2
+[2020-05-01 16:32:34,250] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: SmLE-PZQ-ER-RNA-adu-f.3
+[2020-05-01 16:32:34,279] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: SmLE-PZQ-ER-RNA-juv-m.3
+[2020-05-01 16:32:34,304] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: SmLE-PZQ-ER-RNA-adu-f.1
+[2020-05-01 16:32:34,328] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: SmLE-PZQ-ER-RNA-juv-f.3
+[2020-05-01 16:32:34,353] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: SmLE-PZQ-ES-RNA-juv-f.3
+[2020-05-01 16:32:34,377] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: SmLE-PZQ-ER-RNA-juv-f.1
+[2020-05-01 16:32:34,402] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: SmLE-PZQ-ER-RNA-adu-m.2
+[2020-05-01 16:32:34,426] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: SmLE-PZQ-ER-RNA-juv-f.2
+[2020-05-01 16:32:34,451] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: SmLE-PZQ-ES-RNA-adu-f.3
+[2020-05-01 16:32:34,475] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: SmLE-PZQ-ES-RNA-adu-f.2
+[2020-05-01 16:32:34,500] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: SmLE-PZQ-ES-RNA-adu-f.1
+[2020-05-01 16:32:34,524] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: SmLE-PZQ-ER-RNA-adu-f.2
+[2020-05-01 16:32:34,548] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: SmLE-PZQ-ES-RNA-juv-f.1
+[2020-05-01 16:32:34,573] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: SmLE-PZQ-ES-RNA-adu-m.3
+[2020-05-01 16:32:34,597] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: SmLE-PZQ-ER-RNA-adu-m.3
+[2020-05-01 16:32:34,622] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: SmLE-PZQ-ES-RNA-adu-m.1
+[2020-05-01 16:32:34,646] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: SmLE-PZQ-ES-RNA-juv-m.2
+[2020-05-01 16:32:34,670] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: SmLE-PZQ-ER-RNA-adu-m.1
+[2020-05-01 16:32:34,695] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: SmLE-PZQ-ER-RNA-juv-m.1
+[2020-05-01 16:32:34,719] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: SmLE-PZQ-ES-RNA-juv-m.1
+[2020-05-01 16:32:34,743] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: SmLE-PZQ-ER-RNA-juv-m.2
+[2020-05-01 16:32:34,767] multiqc.modules.star.star                          [DEBUG  ]  Duplicate ReadsPerGene sample name found! Overwriting: SmLE-PZQ-ES-RNA-adu-m.2
+[2020-05-01 16:32:34,768] multiqc.modules.star.star                          [INFO   ]  Found 24 reports and 24 gene count files
+[2020-05-01 16:32:34,789] multiqc                                            [DEBUG  ]  No samples found: hisat2
+[2020-05-01 16:32:34,798] multiqc                                            [DEBUG  ]  No samples found: tophat
+[2020-05-01 16:32:34,805] multiqc                                            [DEBUG  ]  No samples found: bowtie2
+[2020-05-01 16:32:34,814] multiqc                                            [DEBUG  ]  No samples found: bowtie1
+[2020-05-01 16:32:34,823] multiqc                                            [DEBUG  ]  No samples found: kat
+[2020-05-01 16:32:34,831] multiqc                                            [DEBUG  ]  No samples found: leehom
+[2020-05-01 16:32:34,839] multiqc                                            [DEBUG  ]  No samples found: adapterRemoval
+[2020-05-01 16:32:34,847] multiqc                                            [DEBUG  ]  No samples found: clipandmerge
+[2020-05-01 16:32:34,855] multiqc                                            [DEBUG  ]  No samples found: cutadapt
+[2020-05-01 16:32:34,863] multiqc                                            [DEBUG  ]  No samples found: flexbar
+[2020-05-01 16:32:34,871] multiqc                                            [DEBUG  ]  No samples found: trimmomatic
+[2020-05-01 16:32:34,879] multiqc                                            [DEBUG  ]  No samples found: skewer
+[2020-05-01 16:32:34,887] multiqc                                            [DEBUG  ]  No samples found: sortmerna
+[2020-05-01 16:32:34,895] multiqc                                            [DEBUG  ]  No samples found: biobloomtools
+[2020-05-01 16:32:34,903] multiqc                                            [DEBUG  ]  No samples found: fastq_screen
+[2020-05-01 16:32:34,911] multiqc                                            [DEBUG  ]  No samples found: afterqc
+[2020-05-01 16:32:34,922] multiqc                                            [DEBUG  ]  No samples found: fastp
+[2020-05-01 16:32:36,172] multiqc.modules.fastqc.fastqc                      [INFO   ]  Found 48 reports
+[2020-05-01 16:32:36,725] multiqc                                            [DEBUG  ]  No samples found: minionqc
+[2020-05-01 16:32:36,733] multiqc                                            [DEBUG  ]  No samples found: mosdepth
+[2020-05-01 16:32:36,741] multiqc                                            [DEBUG  ]  No samples found: clusterflow
+[2020-05-01 16:32:36,750] multiqc                                            [DEBUG  ]  No samples found: bcl2fastq
+[2020-05-01 16:32:36,761] multiqc                                            [DEBUG  ]  No samples found: interop
+[2020-05-01 16:32:36,772] multiqc                                            [DEBUG  ]  No samples found: flash
+[2020-05-01 16:32:36,783] multiqc                                            [DEBUG  ]  No samples found: seqyclean
+[2020-05-01 16:32:36,950] multiqc                                            [INFO   ]  Compressing plot data
+[2020-05-01 16:32:37,990] multiqc                                            [WARNING]  Previous MultiQC output found! Adjusting filenames..
+[2020-05-01 16:32:37,991] multiqc                                            [WARNING]  Use -f or --force to overwrite existing reports instead
+[2020-05-01 16:32:37,991] multiqc                                            [INFO   ]  Report      : results/1-report/multiqc_report_1.html
+[2020-05-01 16:32:37,991] multiqc                                            [INFO   ]  Data        : results/1-report/multiqc_data_1
+[2020-05-01 16:32:37,993] multiqc                                            [DEBUG  ]  Moving data file from '/tmp/tmp8fgx6e_o/multiqc_data/multiqc_qualimap_bamqc_genome_results.txt' to 'results/1-report/multiqc_data_1'
+[2020-05-01 16:32:37,998] multiqc                                            [DEBUG  ]  Moving data file from '/tmp/tmp8fgx6e_o/multiqc_data/multiqc_star.txt' to 'results/1-report/multiqc_data_1'
+[2020-05-01 16:32:38,003] multiqc                                            [DEBUG  ]  Moving data file from '/tmp/tmp8fgx6e_o/multiqc_data/multiqc_fastqc.txt' to 'results/1-report/multiqc_data_1'
+[2020-05-01 16:32:38,008] multiqc                                            [DEBUG  ]  Moving data file from '/tmp/tmp8fgx6e_o/multiqc_data/multiqc_general_stats.txt' to 'results/1-report/multiqc_data_1'
+[2020-05-01 16:32:38,012] multiqc                                            [DEBUG  ]  Moving data file from '/tmp/tmp8fgx6e_o/multiqc_data/multiqc_sources.txt' to 'results/1-report/multiqc_data_1'
+[2020-05-01 16:32:38,016] multiqc                                            [DEBUG  ]  Moving data file from '/tmp/tmp8fgx6e_o/multiqc_data/multiqc_data.json' to 'results/1-report/multiqc_data_1'
+[2020-05-01 16:32:38,269] multiqc                                            [INFO   ]  MultiQC complete
