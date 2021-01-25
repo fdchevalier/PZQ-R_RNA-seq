@@ -1,6 +1,8 @@
 data
+!data/genome/
 !data/genome/Sm_v7.1_transcript_table_gff-hhpred.tsv
+graphs
+results
 status
 .snakemake
 .ipynb_checkpoints
-
