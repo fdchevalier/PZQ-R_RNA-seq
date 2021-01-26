@@ -1,12 +1,41 @@
+#!/usr/bin/env Rscript
+# Title: RNA-seq_TRP_analysis.R
+# Version: 0.1
+# Author: Frédéric CHEVALIER <fcheval@txbiomed.org>
+# Created in: 2020-05-08
+# Modified in: 2021-01-25
+
+
+
+#==========#
+# Comments #
+#==========#
+
+# Analyze specifically SmTRP.PZQ (Smp_246790) gene and isoforms data from RNA-seq on juveniles and adult worms
+
+
+
+#==========#
+# Versions #
+#==========#
+
+# v0.1 - 2021-01-25: header added / package message handled / info messages added
+# v0.0 - 2020-05-08: creation
+
+
 
 #==========#
 # Packages #
 #==========#
 
-library("EBSeq")
-library("matrixStats")
-library("gplots")
-library("colorspace")
+cat("Loading packages...\n")
+
+suppressMessages({
+    library("EBSeq")
+    library("matrixStats")
+    library("gplots")
+    library("colorspace")
+})
 
 
 
@@ -14,8 +43,10 @@ library("colorspace")
 # Variables #
 #===========#
 
+cat("Setting variables...\n")
+
 # Working directory
-#setwd(file.path(getwd(), "scripts"))
+setwd(file.path(getwd(), "scripts"))
 
 # Folders
 data_fd    <- "../data"
@@ -44,9 +75,12 @@ myconditions2 <- make.names(myconditions[,1]) # To match column names
 myclr <- rainbow_hcl(nrow(myconditions))
 
 
+
 #=================#
 # Data processing #
 #=================#
+
+cat("Processing data...\n")
 
 myres <- vector("list", length(mytypes))
 
@@ -81,6 +115,8 @@ for (t in 1:length(mytypes)) {
 #=========#
 # Figures #
 #=========#
+
+cat("Generating graphs...\n")
 
 if (! dir.exists(graph_fd)) { dir.create(graph_fd) }
 

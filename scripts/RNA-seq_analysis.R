@@ -1,14 +1,47 @@
+#!/usr/bin/env Rscript
+# Title: RNA-seq_analysis.R
+# Version: 0.1
+# Author: Frédéric CHEVALIER <fcheval@txbiomed.org>
+# Created in: 2020-05-08
+# Modified in: 2021-01-25
+
+
+
+#==========#
+# Comments #
+#==========#
+
+# Analyze RNA-seq data from juvenile and adult worms
+
+
+
+#==========#
+# Versions #
+#==========#
+
+# v0.1 - 2021-01-25: header added / package message handled / info messages added / minor bugs corrected
+# v0.0 - 2020-05-08: creation
+
+
+
 #==========#
 # Packages #
 #==========#
 
-library("EBSeq")
+cat("Loading packages...\n")
+
+suppressMessages({
+    library("EBSeq")
+})
 
 
 
 #===========#
 # Functions #
 #===========#
+
+# Working directory
+setwd(file.path(getwd(), "scripts"))
 
 source("RNA-seq_analysis_func.R")
 
@@ -18,8 +51,7 @@ source("RNA-seq_analysis_func.R")
 # Variables #
 #===========#
 
-# Working directory
-#setwd(file.path(getwd(), "scripts"))
+cat("Setting variables...\n")
 
 # Folders
 data_fd    <- "../data"
@@ -70,6 +102,8 @@ clr.ln <- "brown"
 # Data processing #
 #=================#
 
+cat("Processing data...\n")
+
 # Loading accessory data
 mygoi2 <- readLines(mygoi2_file)
 mygoi3 <- readLines(mygoi3_file)
@@ -114,7 +148,7 @@ for (t in 1:length(mytypes)) {
         }
 
 
-        if (i == "isoform") {
+        if (mytype.tmp == "isoform") {
             IsoNames     <- rownames(mydata.cln)
             IsoGeneNames <- IsoNames %>% strsplit(., ".", fixed=T) %>% sapply(., function(x) x[1])
 
@@ -149,8 +183,9 @@ for (t in 1:length(mytypes)) {
 # Figures #
 #=========#
 
-if (! dir.exists(graph_fd)) { dir.create(graph_fd) }
+cat("Generating graphs...\n")
 
+if (! dir.exists(graph_fd)) { dir.create(graph_fd) }
 
 
 for (t in 1:length(mytypes)) {

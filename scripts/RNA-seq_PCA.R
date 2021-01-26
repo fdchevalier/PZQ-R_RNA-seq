@@ -1,10 +1,40 @@
+#!/usr/bin/env Rscript
+# Title: RNA-seq_PCA.R
+# Version: 0.1
+# Author: Frédéric CHEVALIER <fcheval@txbiomed.org>
+# Created in: 2020-05-08
+# Modified in: 2021-01-25
+
+
+
+#==========#
+# Comments #
+#==========#
+
+# Perform a sanity check using GLM-PCA to identify which is the major factor structuring the data
+
+
+
+#==========#
+# Versions #
+#==========#
+
+# v0.1 - 2021-01-25: header added / package message handled / info messages added
+# v0.0 - 2020-05-08: creation
+
+
+
 #==========#
 # Packages #
 #==========#
 
-library("glmpca")
-library("colorspace")
-library("magrittr")
+cat("Loading packages...\n")
+
+suppressMessages({
+    library("glmpca")
+    library("colorspace")
+    library("magrittr")
+})
 
 
 
@@ -12,8 +42,10 @@ library("magrittr")
 # Variables #
 #===========#
 
+cat("Setting variables...\n")
+
 # Working directory
-#setwd(file.path(getwd(), "scripts"))
+setwd(file.path(getwd(), "scripts"))
 
 # Folders
 data_fd    <- "../data"
@@ -50,6 +82,8 @@ myseed <- 1598
 # Data processing #
 #=================#
 
+cat("Processing data...\n")
+
 mytype.tmp <- mytypes[1]
 
 # Loading data
@@ -68,6 +102,8 @@ eig.val <- (gpca$dev^2 / sum(gpca$dev^2) * 100) %>% round(., digit=2)
 #=========#
 # Figures #
 #=========#
+
+cat("Generating graphs...\n")
 
 if (! dir.exists(graph_fd)) { dir.create(graph_fd) }
 
