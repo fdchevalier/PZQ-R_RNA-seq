@@ -1,9 +1,9 @@
 #!/usr/bin/env Rscript
 # Title: RNA-seq_TRP_analysis.R
-# Version: 0.1
+# Version: 0.2
 # Author: Frédéric CHEVALIER <fcheval@txbiomed.org>
 # Created in: 2020-05-08
-# Modified in: 2021-01-25
+# Modified in: 2021-05-11
 
 
 
@@ -19,6 +19,7 @@
 # Versions #
 #==========#
 
+# v0.2 - 2021-05-11: R object exported / code cleaned
 # v0.1 - 2021-01-25: header added / package message handled / info messages added
 # v0.0 - 2020-05-08: creation
 
@@ -58,8 +59,6 @@ result2_fd <- "../results/3-quantification"
 mytypes <- c("gene", "isoform")
 mygenes <- c("Smp_246790")
 
-# myconditions <- c("SmLE-PZQ-ER-RNA-f", "SmLE-PZQ-ER-RNA-m", "SmLE-PZQ-ES-RNA-f", "SmLE-PZQ-ES-RNA-m")
-# myconditions <- c("SmLE-PZQ-ER-RNA-juv-f", "SmLE-PZQ-ER-RNA-juv-m", "SmLE-PZQ-ES-RNA-juv-f", "SmLE-PZQ-ES-RNA-juv-m", "SmLE-PZQ-ER-RNA-adu-f", "SmLE-PZQ-ER-RNA-adu-m", "SmLE-PZQ-ES-RNA-adu-f", "SmLE-PZQ-ES-RNA-adu-m")
 myconditions <- matrix(c("SmLE-PZQ-ER-RNA-juv-f", "ER juvenile female",
                          "SmLE-PZQ-ER-RNA-juv-m", "ER juvenile male",
                          "SmLE-PZQ-ES-RNA-juv-f", "ES juvenile female",
@@ -100,8 +99,6 @@ for (t in 1:length(mytypes)) {
 
     mydata.i <- mydata[ grepl(mygenes, rownames(mydata)), , drop=FALSE]
 
-    # sapply(seq(1,ncol(mydata.i), by=3), function(x) mean(mydata.i[,x:(x+2)]))
-
     mydata.i.mean <- sapply(myconditions2, function(x) rowMeans(mydata.i[,grep(paste0(x,".*"), colnames(mydata.i)), drop=FALSE]))
     mydata.i.sd   <- sapply(myconditions2, function(x) rowSds(mydata.i[,grep(paste0(x,".*"), colnames(mydata.i)), drop=FALSE]) / sqrt(length(grep(paste0(x,".*"), colnames(mydata.i)))))
 
@@ -109,6 +106,9 @@ for (t in 1:length(mytypes)) {
     names(myres)[t] <- mytype.tmp
 
 }
+
+# Export object for use by other scripts
+save(myres, file=paste0(result2_fd, "/Normalized_count.RData"))
 
 
 
