@@ -1,9 +1,9 @@
 #!/usr/bin/env Rscript
 # Title: RNA-seq_analysis.R
-# Version: 0.1
+# Version: 0.2
 # Author: Frédéric CHEVALIER <fcheval@txbiomed.org>
 # Created in: 2020-05-08
-# Modified in: 2021-01-25
+# Modified in: 2021-05-13
 
 
 
@@ -19,6 +19,7 @@
 # Versions #
 #==========#
 
+# v0.2 - 2021-05-13: R object exported / code cleaned
 # v0.1 - 2021-01-25: header added / package message handled / info messages added / minor bugs corrected
 # v0.0 - 2020-05-08: creation
 
@@ -69,15 +70,7 @@ mygenes <- c("Smp_246790", "Smp_317670")
 
 myann_file <- paste0(data_fd, "/genome/Sm_v7.1_transcript_table_gff-hhpred.tsv")
 
-# myconditions <- c("SmLE-PZQ-ER-RNA-adu-m", "SmLE-PZQ-ES-RNA-adu-m")
-#myconditions <- c("SmLE-PZQ-ER-RNA-f", "SmLE-PZQ-ES-RNA-f")
-
 # Multi-comparisons
-#myconditions <- c("SmLE-PZQ-ER-RNA-f", "SmLE-PZQ-ER-RNA-m", "SmLE-PZQ-ES-RNA-f", "SmLE-PZQ-ES-RNA-m")
-#mycomp <- matrix(c(
-#            "SmLE-PZQ-ER-RNA", "SmLE-PZQ-ES-RNA",
-#            "RNA-f", "RNA-m"), ncol=2, byrow=TRUE)
-
 mycomp <- matrix(c("SmLE-PZQ-ER-RNA-adu-m", "SmLE-PZQ-ES-RNA-adu-m",
                    "SmLE-PZQ-ER-RNA-adu-f", "SmLE-PZQ-ES-RNA-adu-f",
                    "SmLE-PZQ-ER-RNA-juv-m", "SmLE-PZQ-ES-RNA-juv-m",
@@ -162,8 +155,8 @@ for (t in 1:length(mytypes)) {
 
         myDE.tb <- DE.analysis(mydata.cln, NgVector=IsoNgTrun, Conditions=myconditions3, maxround=10, annotation=myann)
 
-## Multi-comparisons
-#myDE.tb <- DE.analysis(mydata.cln, NgVector=IsoNgTrun, Conditions=myconditions2, maxround=10, comparisons=mycomp)
+        ## Multi-comparisons
+        #myDE.tb <- DE.analysis(mydata.cln, NgVector=IsoNgTrun, Conditions=myconditions2, maxround=10, comparisons=mycomp)
 
         results <- myDE.tb[[1]]
         myDE    <- myDE.tb[[2]]
@@ -176,6 +169,9 @@ for (t in 1:length(mytypes)) {
         myres[[t]][[j]] <- myDE.tb
     }
 }
+
+# Export object for use by other scripts
+save(myres, file=paste0(result2_fd, "/myDE.tb.RData"))
 
 
 
@@ -220,6 +216,10 @@ for (t in 1:length(mytypes)) {
         QQP(EBOut)
         DenNHist(EBOut)
         dev.off()
+
+        #--------------#
+        # Volcano plot #
+        #--------------#
 
         myclr <- vector("list", length(mygenes)+1)
 
