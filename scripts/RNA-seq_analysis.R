@@ -1,9 +1,9 @@
 #!/usr/bin/env Rscript
 # Title: RNA-seq_analysis.R
-# Version: 0.2
+# Version: 0.3
 # Author: Frédéric CHEVALIER <fcheval@txbiomed.org>
 # Created in: 2020-05-08
-# Modified in: 2021-05-13
+# Modified in: 2021-06-06
 
 
 
@@ -19,6 +19,7 @@
 # Versions #
 #==========#
 
+# v0.3 - 2021-06-06: file path updated / comparisons added
 # v0.2 - 2021-05-13: R object exported / code cleaned
 # v0.1 - 2021-01-25: header added / package message handled / info messages added / minor bugs corrected
 # v0.0 - 2020-05-08: creation
@@ -65,7 +66,7 @@ mytypes <- c("gene", "isoform")
 
 # My genes of interest
 mygoi2_file <- paste0(result_fd, "/2-QTL/QTL_genes_chr2")
-mygoi3_file <- paste0(result_fd, "/2-QTL/QTL_genes")
+mygoi3_file <- paste0(result_fd, "/2-QTL/QTL_genes_chr3")
 mygenes <- c("Smp_246790", "Smp_317670")
 
 myann_file <- paste0(data_fd, "/genome/Sm_v7.1_transcript_table_gff-hhpred.tsv")
@@ -73,6 +74,9 @@ myann_file <- paste0(data_fd, "/genome/Sm_v7.1_transcript_table_gff-hhpred.tsv")
 # Multi-comparisons
 mycomp <- matrix(c("SmLE-PZQ-ER-RNA-adu-m", "SmLE-PZQ-ES-RNA-adu-m",
                    "SmLE-PZQ-ER-RNA-adu-f", "SmLE-PZQ-ES-RNA-adu-f",
+                   "SmLE-PZQ-ER-RNA-adu-m", "SmLE-PZQ-ES-RNA-adu-f",
+                   "SmLE-PZQ-ES-RNA-adu-m", "SmLE-PZQ-ES-RNA-adu-f",
+                   "SmLE-PZQ-ER-RNA-adu-m", "SmLE-PZQ-ES-RNA-juv-m",
                    "SmLE-PZQ-ER-RNA-juv-m", "SmLE-PZQ-ES-RNA-juv-m",
                    "SmLE-PZQ-ER-RNA-juv-f", "SmLE-PZQ-ES-RNA-juv-f",
                    "SmLE-PZQ-ER-RNA-juv-m", "SmLE-PZQ-ER-RNA-adu-m",
