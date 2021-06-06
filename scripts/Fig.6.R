@@ -1,9 +1,9 @@
 #!/usr/bin/env Rscript
 # Title: Fig6.R
-# Version: 0.0
+# Version: 0.1
 # Author: Frédéric CHEVALIER <fcheval@txbiomed.org>
 # Created in: 2021-05-12
-# Modified in:
+# Modified in: 2021-06-06
 
 
 
@@ -19,6 +19,7 @@
 # Versions #
 #==========#
 
+# v0.1 - 2021-06-06: update code and file path / correct sample order
 # v0.0 - 2021-05-12: creation
 
 
@@ -52,7 +53,7 @@ mytypes <- c("gene", "isoform")
 mygenes <- c("Smp_246790")
 
 # My genes of interest
-mygoi3_file <- paste0(result_fd, "/2-QTL/QTL_genes")
+mygoi3_file <- paste0(result_fd, "/2-QTL/QTL_genes_chr3")
 mygenes <- c("Smp_246790")
 
 myann_file <- paste0(data_fd, "/genome/Sm_v7.1_transcript_table_gff-hhpred.tsv")
@@ -73,10 +74,10 @@ myconditions <- matrix(c("SmLE-PZQ-ES-RNA-adu-m", "ES adult male",
                          "SmLE-PZQ-ES-RNA-adu-f", "ES adult female",
                          "SmLE-PZQ-ES-RNA-juv-m", "ES juvenile male",
                          "SmLE-PZQ-ES-RNA-juv-f", "ES juvenile female",
-                         "SmLE-PZQ-ER-RNA-juv-m", "ER juvenile male",
-                         "SmLE-PZQ-ER-RNA-juv-f", "ER juvenile female",
                          "SmLE-PZQ-ER-RNA-adu-m", "ER adult male",
-                         "SmLE-PZQ-ER-RNA-adu-f", "ER adult female"),
+                         "SmLE-PZQ-ER-RNA-adu-f", "ER adult female",
+                         "SmLE-PZQ-ER-RNA-juv-m", "ER juvenile male",
+                         "SmLE-PZQ-ER-RNA-juv-f", "ER juvenile female"),
                        ncol=2, byrow=TRUE)
 myconditions2 <- make.names(myconditions[,1]) # To match column names
 
@@ -89,9 +90,9 @@ myconditions2 <- make.names(myconditions[,1]) # To match column names
 cat("Processing data...\n")
 
 # Loading accessory data
-mygoi2 <- readLines(mygoi2_file)
+mygoi3 <- readLines(mygoi3_file)
 
-mygenes <- c(list(mygoi2), as.list(mygenes))
+mygenes <- c(list(mygoi3), as.list(mygenes))
 
 load(paste0(result2_fd, "/myDE.tb.RData"))
 myDE_all <- myres
@@ -101,7 +102,6 @@ mycount <- myres
 
 # Reorder vector
 reo_count <- sapply(myconditions2, function(x) grep(x, names(mycount[[1]][[1]]))) %>% unname()
-
 
 
 #=========#
