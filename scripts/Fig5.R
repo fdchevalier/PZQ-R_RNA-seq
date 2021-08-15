@@ -1,9 +1,9 @@
 #!/usr/bin/env Rscript
 # Title: Fig5.R
-# Version: 0.2
+# Version: 0.3
 # Author: Frédéric CHEVALIER <fcheval@txbiomed.org>
 # Created in: 2021-05-12
-# Modified in: 2021-07-27
+# Modified in: 2021-08-15
 
 
 
@@ -19,6 +19,7 @@
 # Versions #
 #==========#
 
+# v0.3 - 2021-08-15: adapt the figure to the journal guidelines
 # v0.2 - 2021-07-27: rename script / update graph path
 # v0.1 - 2021-06-06: update code and file path / correct sample order
 # v0.0 - 2021-05-12: creation
@@ -114,7 +115,7 @@ cat("Generating graphs...\n")
 if (! dir.exists(graph_fd)) { dir.create(graph_fd) }
 
 
-pdf(paste0(graph_fd, "Fig. 5.pdf"), width=8, heigh=10, useDingbats=TRUE)
+pdf(paste0(graph_fd, "Fig. 5.pdf"), width=7, heigh=8.75, useDingbats=TRUE)
 
 layout(matrix(c(1, 2, 3, 3, 4, 4), ncol=2, byrow=TRUE))
 
@@ -158,7 +159,7 @@ for (t in 1:length(mytypes)) {
             
     }
     
-    mtext(paste0(LETTERS[t], "."), side=3, line=2, at=line2user(par("mar")[2],2), cex=par("cex")*2, adj=0)
+    mtext(LETTERS[t], side=3, line=2, at=line2user(par("mar")[2],2), cex=par("cex")*2, adj=0)
 }
 
 
