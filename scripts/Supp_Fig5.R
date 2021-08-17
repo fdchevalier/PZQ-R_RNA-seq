@@ -1,9 +1,9 @@
 #!/usr/bin/env Rscript
 # Title: Supp_Fig5.R
-# Version: 0.1
+# Version: 0.2
 # Author: Frédéric CHEVALIER <fcheval@txbiomed.org>
 # Created in: 2021-06-06
-# Modified in: 2021-08-10
+# Modified in: 2021-08-16
 
 
 
@@ -19,6 +19,7 @@
 # Versions #
 #==========#
 
+# v0.2 - 2021-08-16: redesign graph layout to fit in a single page of the supplementary file 
 # v0.1 - 2021-08-10: rename script / update graph path / redesign graph layout
 # v0.0 - 2021-06-06: creation
 
@@ -65,7 +66,8 @@ mycomp <- matrix(c("SmLE-PZQ-ER-RNA-adu-m", "SmLE-PZQ-ES-RNA-adu-f",
                    "SmLE-PZQ-ES-RNA-juv-f", "SmLE-PZQ-ES-RNA-adu-f",
                    "SmLE-PZQ-ER-RNA-juv-m", "SmLE-PZQ-ES-RNA-juv-m",
                    "SmLE-PZQ-ER-RNA-juv-f", "SmLE-PZQ-ES-RNA-juv-f",
-                   "SmLE-PZQ-ER-RNA-adu-m", "SmLE-PZQ-ES-RNA-juv-m"),
+                   "SmLE-PZQ-ER-RNA-adu-m", "SmLE-PZQ-ES-RNA-juv-m",
+                   "SmLE-PZQ-ER-RNA-juv-m", "SmLE-PZQ-ER-RNA-adu-m"),
                   ncol=2, byrow=TRUE)
 
 # Graphic variables
@@ -119,102 +121,133 @@ cat("Generating graphs...\n")
 
 if (! dir.exists(graph_fd)) { dir.create(graph_fd) }
 
-pdf(paste0(graph_fd, "Supp. Fig. 5.pdf"), width = 8, heigh = 3 * nrow(mycomp), useDingbats=TRUE)
+pdf(paste0(graph_fd, "Supp. Fig. 5.pdf"), width = 14, heigh = 3 * nrow(mycomp) / 2, useDingbats=TRUE)
 
-mycex <- 1.5
+mycex <- 1.2
 
-# Layout matrix
-## Core matrix
-mymat <- matrix(c(1:(nrow(mycomp) * 2)), ncol=2, byrow = FALSE)
+mycln   <- 2
+myseq   <- 1:nrow(mycomp)
+mysplit <- split(myseq, sort(myseq %% mycln))
 
-## Add rows
-mymat <- rbind(max(mymat) + 1:2, mymat)
-mymat <- rbind(mymat, rep(max(mymat) + 1, 2))
-mymat <- rbind(mymat, rep(max(mymat) + 1, 2))
+# Layout
+mat.ls <- vector("list", length(mysplit))
+for (s in 1:length(mysplit)) {
 
-## Add columns
-mymat <- cbind(c(0, rep(max(mymat) + 1, nrow(mycomp)), 0, 0), mymat)
-mymat <- cbind(mymat, c(0, max(mymat) + 1:nrow(mycomp), 0, 0))
+    mycomp.tmp <- mycomp[mysplit[[s]], ]
 
-## Create layout
-layout(mymat, widths = c(0.1, 1, 1, 0.5), heights = c(0.1, rep(1, nrow(mycomp)), 0.1, 0.2))
-
-# Define margins
-par(mar = c(2, 2, 1, 1))
-
-for (t in 1:length(mytypes)) {
-
-    mytype.tmp <- mytypes[t]
-
-    for (j in 1:nrow(mycomp)) {
-        
-        mynm    <- paste0(c(mytype.tmp, mycomp[j,]), collapse="-")
-        
-        # Loading data
-        myDE.tb <- myDE_all[[t]][[mynm]]
-        myresults <- myDE.tb[[1]]
-
-        #--------------#
-        # Volcano plot #
-        #--------------#
-
-        myclr <- vector("list", length(mygenes)+1)
-
-        myclr <- lapply(myclr, function(x) rep(FALSE, nrow(myresults)))
-
-        myclr[[1]][ myresults$PPDE > 0.95 & abs(log2(myresults$PostFC)) > 1 ] <- TRUE  # !! make variables !
-
-        for (i in 2:(length(mygenes)+1)) {
-            myclr[[i]][ grepl(paste0(mygenes[[i-1]], collapse="|"), rownames(myresults)) ] <- TRUE 
-        }
-
-        # Axis
-        if (t == 2) { myyax <- "n" } else { myyax <- "s" }
-        if (j != nrow(mycomp)) { myxax <- "n" } else { myxax <- "s" }
-
-        plot(log2(myresults$PostFC), myresults$PPDE, xlab="", ylab="", pch=19, col=clr.vec[1], xaxt=myxax, yaxt=myyax)
-        for (i in 1:length(myclr)) {
-            points(log2(myresults$PostFC)[myclr[[i]]], myresults$PPDE[myclr[[i]]], pch=19, col=clr.vec[i+1])
-        }
-
-        abline(h=0.95, col=clr.ln, lty=2)
-        abline(v=1,    col=clr.ln, lty=2)
-        abline(v=-1,   col=clr.ln, lty=2)
-
+    if (s == 1) {
+        mystart <- 1
+        myend   <- nrow(mycomp.tmp) * 2
+    } else {
+        mystart <- max(mat.ls[[s-1]]) + 1
+        myend   <- mystart + nrow(mycomp.tmp) * 2 - 1
     }
-    
+
+    # Layout matrix
+    ## Core matrix
+    mymat <- matrix(mystart:myend, ncol=2, byrow = FALSE)
+
+    ## Add rows
+    mymat <- rbind(max(mymat) + 1:2, mymat)
+    mymat <- rbind(mymat, rep(max(mymat) + 1, 2))
+    mymat <- rbind(mymat, rep(max(mymat) + 1, 2))
+
+    ## Add columns
+    mymat <- cbind(c(0, rep(max(mymat) + 1, nrow(mycomp.tmp)), 0, 0), mymat)
+    mymat <- cbind(mymat, c(0, max(mymat) + 1:nrow(mycomp.tmp), 0, 0))
+
+    mat.ls[[s]] <- mymat
+
 }
+## Create layout
+mymat <- do.call("cbind", mat.ls)
+layout(mymat, widths = rep(c(0.1, 1, 1, 0.5), 2), heights = c(0.1, rep(1, nrow(mymat) - 3), 0.1, 0.2))
 
-# Redefine margins
-par(mar = c(0, 2, 0, 1))
+for (s in 1:length(mysplit)) {
 
-# Titles
-for (i in mytypes) {
+    mycomp.tmp <- mycomp[mysplit[[s]], ]
+
+    # Define margins
+    par(mar = c(2, 2, 1, 1))
+
+    for (t in 1:length(mytypes)) {
+
+        mytype.tmp <- mytypes[t]
+
+        for (j in 1:nrow(mycomp.tmp)) {
+            
+            mynm    <- paste0(c(mytype.tmp, mycomp.tmp[j,]), collapse="-")
+            
+            # Loading data
+            myDE.tb <- myDE_all[[t]][[mynm]]
+            myresults <- myDE.tb[[1]]
+
+            #--------------#
+            # Volcano plot #
+            #--------------#
+
+            myclr <- vector("list", length(mygenes)+1)
+
+            myclr <- lapply(myclr, function(x) rep(FALSE, nrow(myresults)))
+
+            myclr[[1]][ myresults$PPDE > 0.95 & abs(log2(myresults$PostFC)) > 1 ] <- TRUE  # !! make variables !
+
+            for (i in 2:(length(mygenes)+1)) {
+                myclr[[i]][ grepl(paste0(mygenes[[i-1]], collapse="|"), rownames(myresults)) ] <- TRUE 
+            }
+
+            # Axis
+            if (t == 2) { myyax <- "n" } else { myyax <- "s" }
+            if (j != nrow(mycomp.tmp)) { myxax <- "n" } else { myxax <- "s" }
+
+            plot(log2(myresults$PostFC), myresults$PPDE, xlab="", ylab="", pch=19, col=clr.vec[1], xaxt=myxax, yaxt=myyax)
+            for (i in 1:length(myclr)) {
+                points(log2(myresults$PostFC)[myclr[[i]]], myresults$PPDE[myclr[[i]]], pch=19, col=clr.vec[i+1])
+            }
+
+            abline(h=0.95, col=clr.ln, lty=2)
+            abline(v=1,    col=clr.ln, lty=2)
+            abline(v=-1,   col=clr.ln, lty=2)
+
+        }
+        
+    }
+
+    # Redefine margins
+    par(mar = c(0, 2, 0, 1))
+
+    # Titles
+    for (i in mytypes) {
+        plot.new()
+        text(0.5, 0.5, labels = paste(tools::toTitleCase(i), "expression"), font = 2, cex = mycex * 1.5)
+    }
+
+    # X axis
     plot.new()
-    text(0.5, 0.5, labels = paste(tools::toTitleCase(i), "expression"), font = 2, cex = mycex * 1.5)
-}
+    text(0.5, 0.5, labels = expression(Fold~change~(log[2])), cex = mycex)
 
-# X axis
-plot.new()
-text(0.5, 0.5, labels = "Fold change (log2)", cex = mycex)
-
-# Legend
-plot.new()
-myorder <- matrix(1:length(clr.vec), ncol = 2, byrow = TRUE)
-legend("center", c("Non significant differential expression", "Significant differential expression", "Gene / isoform expressed under QTL chr. 3", expression(italic(Sm.TRPM[PZQ]) ~ expression))[myorder], col = clr.vec[myorder], pch = 19, bty = "n", ncol = 2)
-
-# Redefine margins
-par(mar = rep(0, 4))
-
-# Y axis
-plot.new()
-text(0.5, 0.5, labels = "Posterior probability", cex = mycex, srt = 90)
-
-# Comparison titles
-for(j in 1:nrow(mycomp)) {
+    # Legend
     plot.new()
-    mytitle <- sapply(mycomp[j,], function(x) myconditions[ myconditions[,1] == x, 2]) %>% paste0(., collapse="\nvs.\n")
-    text(0.5, 0.5, labels = mytitle, cex = mycex, font = 2)
+    myorder <- matrix(1:length(clr.vec), ncol = 2, byrow = TRUE)
+    legend("center", c("Non significant differential expression", "Significant differential expression", "Gene / isoform expressed under QTL chr. 3", expression(italic(Sm.TRPM[PZQ]) ~ expression))[myorder], col = clr.vec[myorder], pch = 19, bty = "n", ncol = 2)
+
+    # Redefine margins
+    par(mar = rep(0, 4))
+
+    # Y axis
+    plot.new()
+    text(0.5, 0.5, labels = "Posterior probability", cex = mycex, srt = 90)
+
+    # Comparison titles
+    for(j in 1:nrow(mycomp.tmp)) {
+        plot.new()
+        mytitle <- sapply(mycomp.tmp[j,], function(x) myconditions[ myconditions[,1] == x, 2]) %>% paste0(., collapse="\nvs.\n")
+        text(0.5, 0.5, labels = mytitle, cex = mycex, font = 2, xpd = TRUE)
+    }
 }
+
+# Separation
+par(xpd = NA)
+abline(v = -4.6, lwd = 2)
 
 dev.off()
