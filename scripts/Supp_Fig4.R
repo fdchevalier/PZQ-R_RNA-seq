@@ -1,9 +1,9 @@
 #!/usr/bin/env Rscript
-# Title: Supp_Fig5.R
-# Version: 0.2
+# Title: Supp_Fig4.R
+# Version: 0.3
 # Author: Frédéric CHEVALIER <fcheval@txbiomed.org>
 # Created in: 2021-06-06
-# Modified in: 2021-08-16
+# Modified in: 2021-08-27
 
 
 
@@ -19,6 +19,7 @@
 # Versions #
 #==========#
 
+# v0.3 - 2021-08-27: rename figure
 # v0.2 - 2021-08-16: redesign graph layout to fit in a single page of the supplementary file 
 # v0.1 - 2021-08-10: rename script / update graph path / redesign graph layout
 # v0.0 - 2021-06-06: creation
@@ -121,7 +122,7 @@ cat("Generating graphs...\n")
 
 if (! dir.exists(graph_fd)) { dir.create(graph_fd) }
 
-pdf(paste0(graph_fd, "Supp. Fig. 5.pdf"), width = 14, heigh = 3 * nrow(mycomp) / 2, useDingbats=TRUE)
+pdf(paste0(graph_fd, "Supp. Fig. 4.pdf"), width = 14, heigh = 3 * nrow(mycomp) / 2, useDingbats=TRUE)
 
 mycex <- 1.2
 
