@@ -185,7 +185,7 @@ for (t in 1:length(mytypes)) {
         barplot2(t(mydata.i.mean), ylab="Expression level (TPM)", beside=TRUE, plot.ci=TRUE, ci.u=t(mydata.i.mean+mydata.i.sd), ci.l=t(mydata.i.mean-mydata.i.sd), las=2, col="grey", names.arg=myconditions[,2], main=expression(paste(italic("Sm.TRPM"["PZQ"]), " isoform 6 expression")))
     }
 
-    mtext(paste0(LETTERS[t+2], "."), side=3, line=2, at=line2user(par("mar")[2],2), cex=par("cex")*2, adj=0)
+    mtext(LETTERS[t+2], side=3, line=2, at=line2user(par("mar")[2],2), cex=par("cex")*2, adj=0)
 }
 
 dev.off()
