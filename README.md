@@ -1,5 +1,7 @@
 # Transcriptomic analysis of the SmLE-PZQ-ER and SmLE-PZQ-ES populations
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5297217.svg)](https://doi.org/10.5281/zenodo.5297217)
+
 This repository contains the notebook and scripts used to analyze the gene and isoform expression of juvenile and adult worms from the SmLE-PZQ-ER and SmLE-PZQ-ES populations in order to better understand the origin of the praziquantel (PZQ) resistance. SmLE-PZQ-ER and ES are specific populations enriched in resistant (ER) or sensitive (ES) alleles to PZQ. This analysis is part of the work described in [Genetic analysis of praziquantel response in schistosome parasites implicates a Transient Receptor Potential channel](https://doi.org/10.1101/2021.06.09.447779). 
 
 ## Abstract
