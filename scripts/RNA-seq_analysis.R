@@ -1,9 +1,9 @@
 #!/usr/bin/env Rscript
 # Title: RNA-seq_analysis.R
-# Version: 0.3
+# Version: 0.4
 # Author: Frédéric CHEVALIER <fcheval@txbiomed.org>
 # Created in: 2020-05-08
-# Modified in: 2021-06-06
+# Modified in: 2023-04-24
 
 
 
@@ -19,6 +19,7 @@
 # Versions #
 #==========#
 
+# v0.4 - 2023-04-24: adapt the analysis to the S. mansoni v10 genome
 # v0.3 - 2021-06-06: file path updated / comparisons added
 # v0.2 - 2021-05-13: R object exported / code cleaned
 # v0.1 - 2021-01-25: header added / package message handled / info messages added / minor bugs corrected
@@ -65,11 +66,10 @@ result2_fd <- "../results/3-quantification"
 mytypes <- c("gene", "isoform")
 
 # My genes of interest
-mygoi2_file <- paste0(result_fd, "/2-QTL/QTL_genes_chr2")
 mygoi3_file <- paste0(result_fd, "/2-QTL/QTL_genes_chr3")
 mygenes <- c("Smp_246790", "Smp_317670")
 
-myann_file <- paste0(data_fd, "/genome/Sm_v7.1_transcript_table_gff-hhpred.tsv")
+myann_file <- paste0(data_fd, "/genome/Sm_transcript_table_gff-hhpred_2023-04-26.tsv")
 
 # Multi-comparisons
 mycomp <- matrix(c("SmLE-PZQ-ER-RNA-adu-m", "SmLE-PZQ-ES-RNA-adu-m",
@@ -88,7 +88,7 @@ mycomp <- matrix(c("SmLE-PZQ-ER-RNA-adu-m", "SmLE-PZQ-ES-RNA-adu-m",
 # Graphic variables
 
 ## Gene color vector
-clr.vec <- c("grey85", "black", "brown", "blue", "red", "green")
+clr.vec <- c("grey85", "black", "blue", "red", "green")
 
 ## Line color for volcano plots
 clr.ln <- "brown"
@@ -102,10 +102,9 @@ clr.ln <- "brown"
 cat("Processing data...\n")
 
 # Loading accessory data
-mygoi2 <- readLines(mygoi2_file)
 mygoi3 <- readLines(mygoi3_file)
 
-mygenes <- c(list(mygoi2, mygoi3), as.list(mygenes))
+mygenes <- c(list(mygoi3), as.list(mygenes))
 
 myann <- read.delim(myann_file, header=TRUE, as.is=TRUE)
 
@@ -251,7 +250,7 @@ for (t in 1:length(mytypes)) {
             abline(v=1,    col=clr.ln, lty=2)
             abline(v=-1,   col=clr.ln, lty=2)
 
-            legend("bottomleft", c("QTL chr. 2", "QTL chr. 3", "TRP", "TCP1"), col=clr.vec[3:length(clr.vec)], pch=19, bty="n")
+            legend("bottomleft", c("QTL chr. 3", "TRP", "TCP1"), col=clr.vec[3:length(clr.vec)], pch=19, bty="n")
             
             dev.off()
         }
