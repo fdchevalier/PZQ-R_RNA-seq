@@ -1,9 +1,9 @@
 #!/usr/bin/env Rscript
-# Title: Fig5.R
-# Version: 0.3
+# Title: Fig2.R
+# Version: 1.0
 # Author: Frédéric CHEVALIER <fcheval@txbiomed.org>
 # Created in: 2021-05-12
-# Modified in: 2021-08-15
+# Modified in: 2023-07-15
 
 
 
@@ -19,6 +19,7 @@
 # Versions #
 #==========#
 
+# v1.0 - 2023-07-15: rename the script / adapt the code to the v10 genome / improve the figure
 # v0.3 - 2021-08-15: adapt the figure to the journal guidelines
 # v0.2 - 2021-07-27: rename script / update graph path
 # v0.1 - 2021-06-06: update code and file path / correct sample order
@@ -72,6 +73,9 @@ clr.vec <- c("grey85", "black", "blue", "red")
 ## Line color for volcano plots
 clr.ln <- "brown"
 
+## Population colors
+mycolor <- c("#d8c99c", "#8cd6cf") %>% setNames(., c("ER", "ES"))
+
 myconditions <- matrix(c("SmLE-PZQ-ES-RNA-adu-m", "ES adult male",
                          "SmLE-PZQ-ES-RNA-adu-f", "ES adult female",
                          "SmLE-PZQ-ES-RNA-juv-m", "ES juvenile male",
@@ -115,18 +119,24 @@ cat("Generating graphs...\n")
 if (! dir.exists(graph_fd)) { dir.create(graph_fd) }
 
 
-pdf(paste0(graph_fd, "Fig. 5.pdf"), width=7, heigh=8.75, useDingbats=TRUE)
+pdf(paste0(graph_fd, "Fig. 5 v2.pdf"), width = 7.5, heigh = 7.5, useDingbats = TRUE)
 
-layout(matrix(c(1, 2, 3, 3, 4, 4), ncol=2, byrow=TRUE))
+#layout(matrix(c(1, 2, 3, 4), ncol=2, byrow=TRUE))
+layout(matrix(c(1, 2, 3, 4, 5, 6), ncol = 2, byrow = TRUE), heights = c(0.48, 0.48, 0.04))
+
+myltr <- 0
 
 for (t in 1:length(mytypes)) {
 
+    par(mar=c(5,4,4,2)+0.1)
+    
     mytype.tmp <- mytypes[t]
+    myltr <- myltr + 1
 
     for (j in 1:nrow(mycomp)) {
         
         mynm <- paste0(c(mytype.tmp, mycomp[j,]), collapse="-")
-        
+       
         # Loading data
         myDE.tb <- myDE_all[[t]][[mynm]]
         myresults <- myDE.tb[[1]]
@@ -145,7 +155,7 @@ for (t in 1:length(mytypes)) {
             myclr[[i]][ grepl(paste0(mygenes[[i-1]], collapse="|"), rownames(myresults)) ] <- TRUE 
         }
 
-        plot(log2(myresults$PostFC), myresults$PPDE, xlab="Fold change (log2)", ylab="Posterior probability", pch=19, col=clr.vec[1], main=paste(tools::toTitleCase(mytype.tmp), "expression"))
+        plot(log2(myresults$PostFC), myresults$PPDE, xlab=expression("Fold change (log"[2] * ")"), ylab="Posterior probability", pch=19, col=clr.vec[1], main=paste("Global", mytype.tmp, "expression"))
         for (i in 1:length(myclr)) {
             points(log2(myresults$PostFC)[myclr[[i]]], myresults$PPDE[myclr[[i]]], pch=19, col=clr.vec[i+1])
         }
@@ -153,21 +163,21 @@ for (t in 1:length(mytypes)) {
         abline(h=0.95, col=clr.ln, lty=2)
         abline(v=1,    col=clr.ln, lty=2)
         abline(v=-1,   col=clr.ln, lty=2)
-
-        # legend("bottomleft", c("Genes under\nQTL chr. 3", expression(italic("Sm.TRPM"["PZQ"]))), col=clr.vec[3:length(clr.vec)], pch=19, bty="n")
-        legend("bottomleft", c("QTL chr. 3", expression(italic("Sm.TRPM"["PZQ"]))), col=clr.vec[3:length(clr.vec)], pch=19, bty="n")
-            
     }
     
-    mtext(LETTERS[t], side=3, line=2, at=line2user(par("mar")[2],2), cex=par("cex")*2, adj=0)
-}
-
-
-for (t in 1:length(mytypes)) {
-
-    mytype.tmp <- mytypes[t]
     
-    par(mar=c(8,4,4,1)+0.1)
+    mtext(LETTERS[myltr], side=3, line=2, at=line2user(par("mar")[2],2), cex=par("cex")*2, adj=0)
+
+    par(mar=c(5,4,4,1)+0.1)
+
+    myltr <- myltr + 1
+
+    myclr.bx <- myconditions[,2]
+    myclr.bx <- gsub(".*ER.*", mycolor["ER"], myclr.bx)
+    myclr.bx <- gsub(".*ES.*", mycolor["ES"], myclr.bx)
+
+    myarg <- myconditions[,2]
+    myarg <- gsub("ER |ES ", "", myarg)
     
     mydata.i.mean <- mycount[[t]][[1]]
     mydata.i.sd   <- mycount[[t]][[2]]
@@ -175,17 +185,31 @@ for (t in 1:length(mytypes)) {
     if (mytype.tmp == "gene") {
         mydata.i.mean <- mydata.i.mean[reo_count]
         mydata.i.sd   <- mydata.i.sd[reo_count]
-        barplot2(t(mydata.i.mean), ylab="Expression level (TPM)", beside=TRUE, plot.ci=TRUE, ci.u=t(mydata.i.mean+mydata.i.sd), ci.l=t(mydata.i.mean-mydata.i.sd), las=2, col="grey", names.arg=myconditions[,2], main=expression(paste(italic("Sm.TRPM"["PZQ"]), " gene expression")))
+        mytitle.tmp   <- mytype.tmp
     }
 
     if (mytype.tmp == "isoform") {
-        myiso <- 6
+        myiso <- 1
         mydata.i.mean <- mycount[[t]][[1]][myiso,][reo_count]
-        mydata.i.sd <- mycount[[t]][[2]][myiso,][reo_count]
-        barplot2(t(mydata.i.mean), ylab="Expression level (TPM)", beside=TRUE, plot.ci=TRUE, ci.u=t(mydata.i.mean+mydata.i.sd), ci.l=t(mydata.i.mean-mydata.i.sd), las=2, col="grey", names.arg=myconditions[,2], main=expression(paste(italic("Sm.TRPM"["PZQ"]), " isoform 6 expression")))
+        mydata.i.sd   <- mycount[[t]][[2]][myiso,][reo_count]
+        mytitle.tmp   <- paste(mytype.tmp, myiso)
     }
+    barplot2(t(mydata.i.mean), space=c(0, 0.5), ylab="Expression level (TPM)", beside=TRUE, plot.ci=TRUE, ci.u=t(mydata.i.mean+mydata.i.sd), ci.l=t(mydata.i.mean-mydata.i.sd), col=myclr.bx, names.arg=NULL, main=bquote(italic("Sm.TRPM"["PZQ"]) ~ .(mytitle.tmp) ~ "expression"))
+    mypos <- seq(1, par("xaxp")[2], par("xaxp")[2] / length(myarg))
+    text(mypos, par("usr")[3] * 5, srt = 45, adj = 1, labels = myarg, xpd = TRUE)
 
-    mtext(LETTERS[t+2], side=3, line=2, at=line2user(par("mar")[2],2), cex=par("cex")*2, adj=0)
+    mtext(LETTERS[myltr], side=3, line=2, at=line2user(par("mar")[2],2), cex=par("cex")*2, adj=0)
 }
 
-dev.off()
+# Legend
+## Legend volcano plot
+par(mar = rep(0, 4))
+plot(NULL, xlim = c(0,1), ylim = c(0,1), axes = FALSE, bty = "n", xlab = "", ylab = "")
+legend("center", c("QTL chr. 3", expression(italic("Sm.TRPM"["PZQ"]))), col=clr.vec[3:length(clr.vec)], pch=19, bty="n", horiz = TRUE)
+
+## Legend barplot
+plot(NULL, xlim = c(0,1), ylim = c(0,1), axes = FALSE, bty = "n", xlab = "", ylab = "")
+legend("center", legend = rev(names(mycolor)), fill = rev(mycolor), bty = "n", horiz = TRUE)
+
+
+invisible(dev.off())
