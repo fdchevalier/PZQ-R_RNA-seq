@@ -1,0 +1,16 @@
+Region	Start - AA - Smp_246790.5_v7	End - AA - Smp_246790.5_v7	Start – CDS - Smp_246790.5_v7	End – CDS - Smp_246790.5_v7	Color
+MHR	1	1371	1	4113	salmon4
+Ankyrin fold	541	597	1623	1791	brown
+Pre-S1	1371	1382	4113	4146	cyan
+S1	1384	1401	4152	4203	royalblue1
+S2	1416	1434	4248	4302	royalblue1
+S3	1450	1468	4350	4404	royalblue1
+S4	1498	1512	4494	4536	royalblue1
+S5	1524	1560	4572	4680	brown1
+Pore	1584	1609	4752	4827	brown1
+S6	1627	1656	4881	4968	brown1
+TRP	1663	1701	4989	5103	purple
+Ribe, pole	1725	1752	5175	5256	yellow
+Ribe, pole	1777	1801	5331	5403	yellow
+Coiled coil	1806	1850	5418	5550	black
+NUDT9H	1915	2268	5745	6804	darkolivegreen3
